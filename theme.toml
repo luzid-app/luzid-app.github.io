@@ -1,0 +1,5 @@
+name = "luzid"
+description = "Luzid: Solana Development at Light Speed"
+license = "MIT"
+homepage = "https://github.com/luzid-app/luzid-app.github.io"
+min_version = "0.15.0"
