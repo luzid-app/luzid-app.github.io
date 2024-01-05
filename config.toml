@@ -80,7 +80,7 @@ library = "katex" # options: "katex", "mathjax". default is "katex".
 [extra.open]
 enable = true
 # this image will be used as fallback if a page has no image of its own
-image = "doks.png"
+image = "luzid.png"
 twitter_site = "thlorenz"
 twitter_creator = "thlorenz"
 facebook_author = "thlorenz"
@@ -90,11 +90,11 @@ og_locale = "en_US"
 ## JSON-LD
 [extra.schema]
 type = "Organization"
-logo = "logo-doks.png"
-twitter = "https://twitter.com/aaranxu"
+logo = "logo-luzid.png"
+twitter = "https://twitter.com/thlorenz"
 linked_in = ""
-github = "https://github.com/aaranxu"
-section = "blog"                        # see config.extra.main~url
+github = "https://github.com/luzid-app"
+section = "blog"                         # see config.extra.main~url
 ## Sitelinks Search Box
 site_links_search_box = false
 
