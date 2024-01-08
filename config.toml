@@ -83,8 +83,6 @@ enable = true
 image = "luzid.png"
 twitter_site = "thlorenz"
 twitter_creator = "thlorenz"
-facebook_author = "thlorenz"
-facebook_publisher = "thlorenz"
 og_locale = "en_US"
 
 ## JSON-LD
