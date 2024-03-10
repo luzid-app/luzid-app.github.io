@@ -10,7 +10,7 @@ template = "blog/page.html"
 authors = ["Thorsten Lorenz"]
 
 [extra]
-lead = "🎉 It's been a long time coming. The first Luzid Alpha is here! 🎉"
+lead = "🎉 It's been a long time coming. The first Luzid Alpha is here!"
 
 [page]
 toc = true
