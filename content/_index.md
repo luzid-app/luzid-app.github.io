@@ -13,4 +13,22 @@ repo_url = "https://github.com/luzid-app"
 
 # Menu items
 
+[[extra.menu.main]]
+name = "Home"
+section = "home"
+url = "/"
+weight = 20
+
+[[extra.menu.main]]
+name = "Blog"
+section = "blog"
+url = "/blog/"
+weight = 20
+
+[[extra.menu.main]]
+name = "SDK Docs"
+section = "sdk-docs"
+url = "/luzid-sdk/docs/ts/classes/_luzid_sdk.luzid_sdk.LuzidSdk.html"
+weight = 20
+
 +++
