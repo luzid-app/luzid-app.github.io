@@ -120,7 +120,7 @@ watched by Luzid in order to benefit from the _Hotswap_ feature.
 I realize that Luzid is still very rough around the edges and you might run into some issues
 as well as miss some features that are essential to you.
 Please don't hesitate to reach out to me and other early adopters on our [Luzid
-Discord](https://discord.com/invite/RftFKAN8Q8) to either have your questions answered or
+Discord](https://discord.com/invite/MBkdC3gxcv) to either have your questions answered or
 engage in discussions about how to improve Luzid.
 
 In the Developers section you can file issues and request new features.
