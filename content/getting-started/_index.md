@@ -100,7 +100,7 @@ In order to gain insight into your transactions and interact with the luzid back
 will most likely want to lauch the UI as well.
 
 - on MacOS open the `LuzidUI.app`to do that
-- on Linux run the `luzid-ui` command in your terminal
+- on Linux run the `luzidui` command in your terminal
 
 If the backend is not running yet then it will wait for you to start it.
 
