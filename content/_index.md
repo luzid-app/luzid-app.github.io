@@ -28,7 +28,7 @@ weight = 20
 [[extra.menu.main]]
 name = "Getting Started"
 section = "getting-started"
-url = "/getting-started/"
+url = "/docs/getting-started/001-installation"
 weight = 20
 
 [[extra.menu.main]]

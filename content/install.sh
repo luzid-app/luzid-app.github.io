@@ -123,6 +123,24 @@ mac_install() {
 
 
   # Move the Luzid UI to Applications
+  _luzidui_app_dir=/Applications/${_luzid_ui}
+  if ! rm -rf ${_luzidui_app_dir}; then
+    echo "Failed to remove previous ${_luzid_ui} at ${_luzidui_app_dir}, trying again with sudo"
+    sudo rm -rf ${_luzidui_app_dir}
+  fi
+
+  if ! mv ${_luzid_ui} ${_luzidui_app_dir}; then
+    echo "Failed to move ${_luzid_ui} to ${_luzidui_app_dir}, trying again with sudo"
+    sudo mv ${_luzid_ui} ${_luzidui_app_dir}
+  fi
+
+  popd > /dev/null
+
+  echo "Launch it via the 'luzid' command from the terminal"
+  echo "Open the 'LuzidUI.app' to connect the UI to it"
+}
+
+_open_finder_windows() {
   printf "\nPlease add LuzidUI.app to Applications\n"
   osascript -e "
 tell application \"Finder\"
@@ -133,11 +151,6 @@ tell application \"Finder\"
   set bounds of Finder window 1 to {500, 0, 700, 200}
 end tell
 " > /dev/null
-
-  popd > /dev/null
-
-  echo "Launch it via the 'luzid' command from the terminal"
-  echo "Open the 'LuzidUI.app' to connect the UI to it"
 }
 
 linux_install() {
