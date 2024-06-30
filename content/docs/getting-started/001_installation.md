@@ -17,9 +17,9 @@ top = false
 <html>
 <style>
 .pre {
-  padding: 20px 10px;
+  padding: 20px 20px;
   white-space: no-wrap;
-  width: 620px;
+  width: 450px;
 }
 </style>
 
