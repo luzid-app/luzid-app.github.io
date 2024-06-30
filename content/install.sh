@@ -121,17 +121,17 @@ mac_install() {
   xattr -dr com.apple.quarantine ${_luzid_ui}
   tar -xzf ${_luzid_ui} && rm ${_luzid_ui}
 
-
   # Move the Luzid UI to Applications
-  _luzidui_app_dir=/Applications/${_luzid_ui}
+  _luzidui_app=LuzidUI.app
+  _luzidui_app_dir=/Applications/${_luzidui_app}
   if ! rm -rf ${_luzidui_app_dir}; then
-    echo "Failed to remove previous ${_luzid_ui} at ${_luzidui_app_dir}, trying again with sudo"
+    echo "Failed to remove previous ${_luzidui_app} at ${_luzidui_app_dir}, trying again with sudo"
     sudo rm -rf ${_luzidui_app_dir}
   fi
 
-  if ! mv ${_luzid_ui} ${_luzidui_app_dir}; then
-    echo "Failed to move ${_luzid_ui} to ${_luzidui_app_dir}, trying again with sudo"
-    sudo mv ${_luzid_ui} ${_luzidui_app_dir}
+  if ! mv ${_luzidui_app} ${_luzidui_app_dir}; then
+    echo "Failed to move ${_luzidui_app} to ${_luzidui_app_dir}, trying again with sudo"
+    sudo mv ${_luzidui_app} ${_luzidui_app_dir}
   fi
 
   popd > /dev/null
