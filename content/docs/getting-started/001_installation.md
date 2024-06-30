@@ -19,14 +19,14 @@ top = false
 .pre {
   padding: 20px 20px;
   white-space: no-wrap;
-  width: 450px;
+  width: 460px;
 }
 </style>
 
 Run the below script in your terminal to install Luzid.
 
 <pre id="install-text" class="pre">
-sh -c "$(curl -sSfL http://luzid.app/install.sh)"
+sh -c "$(curl -sSfL https://luzid.app/install.sh)"
 </pre>
 
 <button type="button" class="copy-btn btn btn-primary" data-clipboard-target="#install-text">
