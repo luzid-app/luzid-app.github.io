@@ -12,7 +12,7 @@ toc = true
 top = false
 +++
 
-The [Installation](../001-installation) script will install two pieces on your machine
+The [Installation](../installation) script will install two pieces on your machine
 
 - `luzid` executable which embedds the MagicBlock validator and is all you need to run tests
 - the luzid UI which can be started optionally to interact with the `luzid` backend
