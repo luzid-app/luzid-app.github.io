@@ -41,5 +41,5 @@ sh -c "$(curl -sSfL https://luzid.app/install.sh)"
 Installation on Windows is a bit more hands-on.
 
 You can run the above script inside a WSL terminal which will install the Linux parts.
-Then please follow the [release notes](https://github.com/luzid-app/luzid-sdk/releases/tag/windows-v0.0.4) in order to get the
+Then please follow these [detailed notes](../windows-installation) in order to get the
 UI setup and connecting to the `luzid` running in the WSL environment.
