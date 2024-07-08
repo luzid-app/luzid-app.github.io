@@ -33,10 +33,14 @@
         <div class="col-lg-9 col-xl-8 text-center">
           <p class="lead">{{ section.extra.lead | default(value="Please start setting config.toml and adding your content.") | safe }}</p>
 
+        <p>
+        <a href="docs/getting-started/installation" class="btn btn-primary btn-lg px-4 mb-2" role="button">Install the latest Luzid Version</a>
+        </p>
+
         <a class="ml-onclick-form"
            href="javascript:void(0)"
            onclick="ml('show', 'ZBwYhW', true)">
-          Sign Up for Release Updates
+          Sign Up for Luzid Updates
         </a>
           <!--
           <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ get_url(path=section.extra.url | default(value="/")) | safe }}" role="button">{{ section.extra.url_button | default(value="Get started") }}</a>
