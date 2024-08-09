@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Luzid</title>
+    <subtitle>Luzid: Solana Development at Light Speed</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://luzid.app/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://luzid.app"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-06-30T08:00:00+00:00</updated>
+    <id>https://luzid.app/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Installation</title>
+        <published>2024-06-30T08:00:00+00:00</published>
+        <updated>2024-06-30T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/docs/getting-started/installation/"/>
+        <id>https://luzid.app/docs/getting-started/installation/</id>
+        
+        <content type="html" xml:base="https://luzid.app/docs/getting-started/installation/">&lt;h3 id=&quot;macos-and-linux-users&quot;&gt;MacOS and Linux Users&lt;&#x2F;h3&gt;
+&lt;html&gt;
+&lt;style&gt;
+.pre {
+  padding: 20px 20px;
+  white-space: no-wrap;
+  width: 460px;
+}
+&lt;&#x2F;style&gt;
+&lt;p&gt;Run the below script in your terminal to install Luzid.&lt;&#x2F;p&gt;
+&lt;pre id=&quot;install-text&quot; class=&quot;pre&quot;&gt;
+sh -c &quot;$(curl -sSfL https:&#x2F;&#x2F;luzid.app&#x2F;install.sh)&quot;
+&lt;&#x2F;pre&gt;
+&lt;button type=&quot;button&quot; class=&quot;copy-btn btn btn-primary&quot; data-clipboard-target=&quot;#install-text&quot;&gt;
+    Copy
+&lt;&#x2F;button&gt;
+&lt;script&gt;new ClipboardJS(&#x27;.copy-btn&#x27;);&lt;&#x2F;script&gt;
+&lt;&#x2F;html&gt;
+&lt;h3 id=&quot;windows-users&quot;&gt;Windows Users&lt;&#x2F;h3&gt;
+&lt;p&gt;Installation on Windows is a bit more hands-on.&lt;&#x2F;p&gt;
+&lt;p&gt;You can run the above script inside a WSL terminal which will install the Linux parts.
+Then please follow these &lt;a href=&quot;..&#x2F;windows-installation&quot;&gt;detailed notes&lt;&#x2F;a&gt; in order to get the
+UI setup and connecting to the &lt;code&gt;luzid&lt;&#x2F;code&gt; running in the WSL environment.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Running Luzid</title>
+        <published>2024-06-30T08:00:00+00:00</published>
+        <updated>2024-06-30T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/docs/getting-started/running-luzid/"/>
+        <id>https://luzid.app/docs/getting-started/running-luzid/</id>
+        
+        <content type="html" xml:base="https://luzid.app/docs/getting-started/running-luzid/">&lt;p&gt;The &lt;a href=&quot;..&#x2F;installation&quot;&gt;Installation&lt;&#x2F;a&gt; script will install two pieces on your machine&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;luzid&lt;&#x2F;code&gt; executable which embedds the MagicBlock validator and is all you need to run tests&lt;&#x2F;li&gt;
+&lt;li&gt;the luzid UI which can be started optionally to interact with the &lt;code&gt;luzid&lt;&#x2F;code&gt; backend&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;running-the-backend&quot;&gt;Running the Backend&lt;&#x2F;h3&gt;
+&lt;p&gt;There are numerous ways to start up the backend.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;start-with-workspace-discovery&quot;&gt;Start with Workspace Discovery&lt;&#x2F;h4&gt;
+&lt;p&gt;This is the recommended way to start the backend as it will automatically find all the programs
+the workspace contained in the current directory.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;luzid&lt;&#x2F;span&gt;&lt;span&gt; .
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;It will clone all the programs into the validator and watch them for changes, which means all
+that&#x27;s need to refresh them in the validator is to compile them via &lt;code&gt;cargo build-sbf&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Running &lt;code&gt;luzid&lt;&#x2F;code&gt; with that &lt;code&gt;.&lt;&#x2F;code&gt; is essentially the same as running it with the below
+configuration.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[[workspace]]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;path &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;start-without-any-configuration&quot;&gt;Start Without any Configuration&lt;&#x2F;h4&gt;
+&lt;p&gt;The simplest way to start the backend is to run the &lt;code&gt;luzid&lt;&#x2F;code&gt; command in your terminal.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;luzid
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;However no local programs will be loaded by default and you&#x27;ll have to either add a workspace
+manually or depend on all programs being available on &lt;code&gt;devnet&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Alternatively you can of course also deploy your programs as usual, but are then loosing out on
+Luzid&#x27;s &lt;em&gt;hot swap&lt;&#x2F;em&gt; feature.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;running-the-ui&quot;&gt;Running the UI&lt;&#x2F;h3&gt;
+&lt;p&gt;In order to gain insight into your transactions and interact with the luzid backend you
+will most likely want to lauch the UI as well.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;on MacOS open the &lt;code&gt;LuzidUI.app&lt;&#x2F;code&gt;to do that&lt;&#x2F;li&gt;
+&lt;li&gt;on Linux run the &lt;code&gt;luzidui&lt;&#x2F;code&gt; command in your terminal&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;If the backend is not running yet then it will wait for you to start it.&lt;&#x2F;p&gt;
+&lt;p&gt;You can stop and start the backend as many times as you like, the UI will reconnect to it.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Windows Installation</title>
+        <published>2024-06-30T08:00:00+00:00</published>
+        <updated>2024-06-30T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/docs/getting-started/windows-installation/"/>
+        <id>https://luzid.app/docs/getting-started/windows-installation/</id>
+        
+        <content type="html" xml:base="https://luzid.app/docs/getting-started/windows-installation/">&lt;h2 id=&quot;installation-instructions&quot;&gt;Installation Instructions&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;1-install-and-run-the-luzid-backend&quot;&gt;1. Install and Run the Luzid Backend&lt;&#x2F;h3&gt;
+&lt;p&gt;Open a WSL terminal in admin mode as shown in the below screenshot:&lt;&#x2F;p&gt;
+&lt;img width=&quot;380&quot; alt=&quot;wsl-as-admin&quot; src=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;assets&#x2F;192891&#x2F;a1d25dab-a449-4ea6-9c05-df388ee5550d&quot;&gt;
+&lt;p&gt;Then run the script provided on the &lt;a href=&quot;&#x2F;docs&#x2F;getting-started&#x2F;installation&quot;&gt;main installation page&lt;&#x2F;a&gt; in order to install the Linux version.&lt;&#x2F;p&gt;
+&lt;p&gt;Now launch it via &lt;code&gt;luzid&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;NOTE: this will also install the &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;bin&#x2F;luzidui&lt;&#x2F;code&gt; and &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;lib&#x2F;luzidui&#x2F;&lt;&#x2F;code&gt; which
+only works on Linux. You can remove that if you want.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;2-download-and-extract-the-luzidui&quot;&gt;2. Download and Extract the LuzidUI&lt;&#x2F;h3&gt;
+&lt;p&gt;Next download the LuzidUI from &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;releases&#x2F;download&#x2F;windows-v0.0.3&#x2F;luzidui.zip&quot;&gt;here&lt;&#x2F;a&gt;,
+extract it to a directory of your choice and launch the &lt;code&gt;luzidui.exe&lt;&#x2F;code&gt; from inside the extracted
+&lt;code&gt;luzidui&lt;&#x2F;code&gt; directory.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;3-run-the-luzidui-and-work-through-windows-warning-dialog&quot;&gt;3. Run the LuzidUI and work through Windows Warning Dialog&lt;&#x2F;h3&gt;
+&lt;p&gt;The very first time you&#x27;ll most likely see a below warning, which you can work around by clicking
+&lt;code&gt;More Info&lt;&#x2F;code&gt; and then &lt;code&gt;Run Anyway&lt;&#x2F;code&gt; as shown in the screenshots below:
+&lt;br&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img width=&quot;250&quot; alt=&quot;windows-defender-01&quot; src=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;assets&#x2F;192891&#x2F;62c6b90f-2edd-46b0-a727-59a93ecf4222&quot;&gt;&lt;img width=&quot;250&quot; alt=&quot;windows-defender-02&quot; src=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;assets&#x2F;192891&#x2F;f026623a-ceef-4d32-a8f8-dd4d7e6ff9f3&quot;&gt;&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;install-missing-dependencies&quot;&gt;Install Missing Dependencies&lt;&#x2F;h4&gt;
+&lt;p&gt;In case you&#x27;re missing Windows developer tools you&#x27;ll see the following prompt:&lt;&#x2F;p&gt;
+&lt;img width=&quot;371&quot; alt=&quot;missing-dotnet-dll&quot; src=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;assets&#x2F;192891&#x2F;a68006f0-2aed-4cd8-a5fd-19f0d92e7441&quot;&gt;
+&lt;p&gt;If you encounter this install the &lt;a href=&quot;https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;cpp&#x2F;windows&#x2F;latest-supported-vc-redist?view=msvc-170&quot;&gt;Latest Microsoft Visual C++ Redistributable Version&lt;&#x2F;a&gt; and make sure to select a downloadable that matches your architecture.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;4-run-luzidui-and-connect-it-to-the-luzid-backend&quot;&gt;4. Run LuzidUI and Connect it to the Luzid Backend&lt;&#x2F;h3&gt;
+&lt;p&gt;Now try to start the UI again and it should connect to the backend running in the WSL terminal.
+Go to &lt;em&gt;Transactions&lt;&#x2F;em&gt; and click the &lt;em&gt;Anchor Tic Tac Toe&lt;&#x2F;em&gt; link to play around with the app while
+keeping an eye on Luzid.&lt;&#x2F;p&gt;
+&lt;img width=&quot;600&quot; alt=&quot;luzid-on-windows&quot; src=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;assets&#x2F;192891&#x2F;98ee2bf6-b6a4-4200-bfc1-25c3160b51b6&quot;&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Luzid Alpha Release</title>
+        <published>2024-06-09T15:00:00+00:00</published>
+        <updated>2024-06-09T15:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/blog/luzid-alpha-release-separate-binary/"/>
+        <id>https://luzid.app/blog/luzid-alpha-release-separate-binary/</id>
+        
+        <content type="html" xml:base="https://luzid.app/blog/luzid-alpha-release-separate-binary/">&lt;p&gt;As some of you may know I joined &lt;a href=&quot;https:&#x2F;&#x2F;www.magicblock.gg&#x2F;&quot;&gt;MagicBlock&lt;&#x2F;a&gt; in order to be able
+to continue Luzid development and keep new releases coming while helping them provide the
+community with the tools needed to build FOCGs (Fully On Chain Games) on Solana.&lt;&#x2F;p&gt;
+&lt;p&gt;MagicBlock will support Luzid going forward as part of their open source tooling provided to
+the entire Solana community.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;modularity-to-democratize-tooling&quot;&gt;Modularity to Democratize Tooling&lt;&#x2F;h2&gt;
+&lt;p&gt;MagicBlock also wants to make these tools accessible to everyone and therefore
+decided to make Luzid available to Windows developers as well as on Linux and MacOS were it
+was already supported.&lt;&#x2F;p&gt;
+&lt;p&gt;In order to do that we modularized Luzid into a backend which currently embeds the Solana
+validator and a frontend which attaches to it in order to provide a convenient UI.&lt;&#x2F;p&gt;
+&lt;p&gt;On Windows that backend can be run inside the WSL (Windows Subsystem for Linux) and the
+frontend runs natively on Windows.&lt;&#x2F;p&gt;
+&lt;img src=&quot;.&#x2F;luzid-on-windows.png&quot; alt=&quot;luzid on windows&quot; style=&quot;width: 100%;&quot;&#x2F;&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;p&gt;The other use case that is now possible is to deploy the Luzid backend remotely and connect the
+UI running locally.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;installing-the-new-version&quot;&gt;Installing the new Version&lt;&#x2F;h2&gt;
+&lt;p&gt;Follow the release notes for either release:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;releases&#x2F;tag&#x2F;windows-v0.0.3&quot;&gt;Windows Release&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;releases&#x2F;tag&#x2F;macos-v0.0.3&quot;&gt;MacOS Release&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;releases&#x2F;tag&#x2F;linux-v0.0.3&quot;&gt;Linux Release&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;If you run into any issues please post them inside the
+&lt;code&gt;🪲 ︱luzid-issues&lt;&#x2F;code&gt; channel in the &lt;a href=&quot;https:&#x2F;&#x2F;discord.com&#x2F;invite&#x2F;MBkdC3gxcv&quot;&gt;MagicBlock Discord&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;coming-up-shortly&quot;&gt;Coming up Shortly&lt;&#x2F;h2&gt;
+&lt;p&gt;MagicBlock wants to make all types of games and applications possible on Solana even if they
+require thousands of transactions processed blazingly fast and state changes to be reflected in
+real time.&lt;&#x2F;p&gt;
+&lt;p&gt;Therefore a big part of my time at MagicBlock is spent building a &lt;strong&gt;low latency validator&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;This validator will be bundled with the next version of Luzid and &lt;strong&gt;boy is the Solana developer
+community in for a treat&lt;&#x2F;strong&gt;! Luzid will naturally inherit the improved performance of this
+MagicBlock validator and testing your Solana programs locally will be incredibly fast thus shortening the
+feedback loop even further.&lt;&#x2F;p&gt;
+&lt;p&gt;And when I say &amp;quot;incredibly fast&amp;quot; I literally mean &lt;em&gt;incredibly&lt;&#x2F;em&gt; fast, but you&#x27;ll have to see it
+to for your self 🔜&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Luzid Alpha Prerelease</title>
+        <published>2024-03-09T15:00:00+00:00</published>
+        <updated>2024-03-09T15:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/blog/luzid-alpha-prerelease/"/>
+        <id>https://luzid.app/blog/luzid-alpha-prerelease/</id>
+        
+        <content type="html" xml:base="https://luzid.app/blog/luzid-alpha-prerelease/">&lt;img src=&quot;.&#x2F;luzid_transactions.png&quot; alt=&quot;luzid transactions&quot; style=&quot;width: 100%;&quot;&#x2F;&gt;
+&lt;p&gt;I expect you have been waiting patiently to get your hands on a copy of Luzid and I&#x27;ve been
+working hard behind the scenes to make it happen. I&#x27;m excited to announce that the first Luzid
+Alpha is now ready to be released to early adopters.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;features&quot;&gt;Features&lt;&#x2F;h2&gt;
+&lt;p&gt;You can learn about the list of features that Luzid currently provides by watching the videos
+in &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;playlist?list=PL4k64WemroGk4B_NHN337425VDC1Fsn5D&quot;&gt;this playlist&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=3J_42C6xuNM&amp;amp;list=PL4k64WemroGk4B_NHN337425VDC1Fsn5D&amp;amp;index=2&quot;&gt;Luzid: Solana Test Validator on
+Steroids&lt;&#x2F;a&gt;
+video describes the following features:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Luzid Dashboard showing the status of the Validator&lt;&#x2F;li&gt;
+&lt;li&gt;Viewing Transactions and inspecting Parsed Transaction Account Data&lt;&#x2F;li&gt;
+&lt;li&gt;Cloning Remote Accounts into Luzid&lt;&#x2F;li&gt;
+&lt;li&gt;Creating and Restoring Account Snapshots&lt;&#x2F;li&gt;
+&lt;li&gt;Stopping&#x2F;Starting the Validator&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;In order to learn about the Luzid &lt;em&gt;Hotswap&lt;&#x2F;em&gt; feature I recommend watching
+&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Nbb88N1JvyE&amp;amp;list=PL4k64WemroGk4B_NHN337425VDC1Fsn5D&amp;amp;index=5&quot;&gt;Luzid: Hotswapping Programs after each Compile without Deploys or Validator Restart&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=M09YWUicVF0&amp;amp;list=PL4k64WemroGk4B_NHN337425VDC1Fsn5D&amp;amp;index=2&quot;&gt;Luzid: controlling your Validator via the SDK from your tests or
+application&lt;&#x2F;a&gt;
+explains how to control Luzid via TypeScript from a webpage or your tests.&lt;&#x2F;p&gt;
+&lt;p&gt;Make sure to read through the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;tree&#x2F;master&#x2F;ts&#x2F;examples&quot;&gt;SDK
+examples&lt;&#x2F;a&gt; as well.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;versions-and-release-pages&quot;&gt;Versions and Release Pages&lt;&#x2F;h2&gt;
+&lt;p&gt;The following versions are available:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Luzid Alpha for MacOS&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;releases&#x2F;tag&#x2F;macos-v0.0.2&quot;&gt;release page&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Luzid Alpha for Linux&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;releases&#x2F;tag&#x2F;linux-v0.0.2&quot;&gt;release page&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I advise especially &lt;strong&gt;MacOS users&lt;&#x2F;strong&gt; to &lt;strong&gt;read the release notes carefully&lt;&#x2F;strong&gt; as the installation process
+will be much easier as a result. However to help you in case issues arise, I&#x27;ve also prepared a
+video tutorial for you that is linked in the release notes.&lt;&#x2F;p&gt;
+&lt;p&gt;For Linux the installation process is much simpler especially if you&#x27;re on the latest LTS version of
+your distro.&lt;&#x2F;p&gt;
+&lt;p&gt;Windows can install the command line only version &lt;a href=&quot;https:&#x2F;&#x2F;luzid.app&#x2F;blog&#x2F;luzid-alpha-prerelease&#x2F;#headless-cli&quot;&gt;see Headless CLI&lt;&#x2F;a&gt; and run it in WSL.
+However for now a GUI for windows is not available until the release coming in a few weeks &lt;a href=&quot;https:&#x2F;&#x2F;luzid.app&#x2F;blog&#x2F;luzid-alpha-prerelease&#x2F;#plans-going-forward&quot;&gt;see
+below&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;luzid-ui&quot;&gt;Luzid UI&lt;&#x2F;h3&gt;
+&lt;p&gt;MacOS users can install the Luzid UI via the following file which will work on both Intel and ARM:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;luzid.app.tar.gz&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Linux users can install the Luzid UI via the following file:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;luzid.tar.gz&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;The release notes for each version contain more installation instructions.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;headless-cli&quot;&gt;Headless CLI&lt;&#x2F;h3&gt;
+&lt;p&gt;The Luzid UI embeds the Luzid validator, however you may want to run the validator separately.&lt;&#x2F;p&gt;
+&lt;p&gt;To that end a &lt;em&gt;headless&lt;&#x2F;em&gt; Luzid version is available for MacOS, Linux and Windows (using the
+Linux version via WSL). You can find it as part of the &lt;em&gt;Assets&lt;&#x2F;em&gt; of the respective releases.&lt;&#x2F;p&gt;
+&lt;p&gt;On MacOS install either of the below:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;lzd_aarch64-apple-darwin.tar.gz&lt;&#x2F;code&gt; (ARM)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;lzd_x86_64-apple-darwin.tar.gz&lt;&#x2F;code&gt; (Intel)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;On Linux install:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;lzd.tar.gz&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Either will provide you a &lt;code&gt;lzd&lt;&#x2F;code&gt; command that you can run via &lt;code&gt;VALIDATOR_START=1 .&#x2F;lzd&lt;&#x2F;code&gt; in order
+to launch Luzid and start the validator as well.&lt;&#x2F;p&gt;
+&lt;p&gt;Then you can control&#x2F;query Luzid via the SDK as well as have it process transactions.&lt;&#x2F;p&gt;
+&lt;p&gt;Refer to the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;tree&#x2F;master&#x2F;ts&#x2F;examples&quot;&gt;SDK examples&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;getting-started-quickly&quot;&gt;Getting Started Quickly&lt;&#x2F;h2&gt;
+&lt;p&gt;Once you startup the Luzid UI open the &lt;em&gt;Transactions&lt;&#x2F;em&gt; tab, click on the &lt;em&gt;Anchor Tic Tac Toe&lt;&#x2F;em&gt; link
+and play around with the app while keeping an eye on Luzid.&lt;&#x2F;p&gt;
+&lt;p&gt;You can follow along the &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=M09YWUicVF0&amp;amp;list=PL4k64WemroGk4B_NHN337425VDC1Fsn5D&amp;amp;index=2&quot;&gt;Luzid: controlling your Validator via the SDK from your tests or
+application&lt;&#x2F;a&gt;
+video as well.&lt;&#x2F;p&gt;
+&lt;p&gt;Once you have that working you should try to clone and then interact with other programs from
+Mainnet or Devnet and of course I recommend you to add a local &lt;em&gt;Workspace&lt;&#x2F;em&gt; and have it being
+watched by Luzid in order to benefit from the &lt;em&gt;Hotswap&lt;&#x2F;em&gt; feature.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;current-status-and-future-plans&quot;&gt;Current Status and Future Plans&lt;&#x2F;h2&gt;
+&lt;p&gt;I realize that Luzid is still very rough around the edges and you might run into some issues
+as well as miss some features that are essential to you.
+Please don&#x27;t hesitate to reach out to me and other early adopters on our &lt;a href=&quot;https:&#x2F;&#x2F;discord.com&#x2F;invite&#x2F;MBkdC3gxcv&quot;&gt;Luzid
+Discord&lt;&#x2F;a&gt; to either have your questions answered or
+engage in discussions about how to improve Luzid.&lt;&#x2F;p&gt;
+&lt;p&gt;In the Developers section you can file issues and request new features.&lt;&#x2F;p&gt;
+&lt;p&gt;At any rate check in and say hi! 👋&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;plans-going-forward&quot;&gt;Plans Going Forward&lt;&#x2F;h3&gt;
+&lt;p&gt;The next big improvement for Luzid will be the replacement of the embedded validator which is
+currently a fork of the existing Solana validator.&lt;&#x2F;p&gt;
+&lt;p&gt;The new validator will be tailored to local development, run much faster and utilize less CPU
+resources.&lt;&#x2F;p&gt;
+&lt;p&gt;Additionally I&#x27;m planning to separate the UI and Validator pieces such that you can start Luzid
+from the command line and attach a UI to it on demand. This will make it easier to support
+Windows and allow us to provide the Luzid UI via a WebApp running in the browser.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Aaran Xu</title>
+        <published>2021-04-01T08:50:45+00:00</published>
+        <updated>2021-04-01T08:50:45+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/authors/aaran-xu/"/>
+        <id>https://luzid.app/authors/aaran-xu/</id>
+        
+        <content type="html" xml:base="https://luzid.app/authors/aaran-xu/">&lt;p&gt;Creator of &lt;strong&gt;AdiDoks&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;aaranxu&quot;&gt;@aaranxu&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
