@@ -2,7 +2,7 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-LUZID_RELEASE=v0.1.0
+LUZID_RELEASE=v0.1.1
 LUZID_DOWNLOAD_ROOT="https://github.com/luzid-app/luzid-sdk/releases/download"
 
 # Copyright 2016 The Rust Project Developers. See the COPYRIGHT
