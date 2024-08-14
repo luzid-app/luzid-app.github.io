@@ -32,6 +32,12 @@ url = "/docs/getting-started/installation"
 weight = 20
 
 [[extra.menu.main]]
+name = "Luzid Docs"
+section = "luzidapp"
+url = "/docs/luzidapp"
+weight = 20
+
+[[extra.menu.main]]
 name = "SDK Docs"
 section = "sdk-docs"
 url = "/luzid-sdk/docs/ts/classes/luzid_sdk.LuzidSdk.html"
