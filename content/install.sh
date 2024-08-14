@@ -2,7 +2,7 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-LUZID_RELEASE=v0.0.4
+LUZID_RELEASE=v0.1.2
 LUZID_DOWNLOAD_ROOT="https://github.com/luzid-app/luzid-sdk/releases/download"
 
 # Copyright 2016 The Rust Project Developers. See the COPYRIGHT
@@ -121,8 +121,26 @@ mac_install() {
   xattr -dr com.apple.quarantine ${_luzid_ui}
   tar -xzf ${_luzid_ui} && rm ${_luzid_ui}
 
-
   # Move the Luzid UI to Applications
+  _luzidui_app=LuzidUI.app
+  _luzidui_app_dir=/Applications/${_luzidui_app}
+  if ! rm -rf ${_luzidui_app_dir}; then
+    echo "Failed to remove previous ${_luzidui_app} at ${_luzidui_app_dir}, trying again with sudo"
+    sudo rm -rf ${_luzidui_app_dir}
+  fi
+
+  if ! mv ${_luzidui_app} ${_luzidui_app_dir}; then
+    echo "Failed to move ${_luzidui_app} to ${_luzidui_app_dir}, trying again with sudo"
+    sudo mv ${_luzidui_app} ${_luzidui_app_dir}
+  fi
+
+  popd > /dev/null
+
+  echo "Launch it via the 'luzid' command from the terminal"
+  echo "Open the 'LuzidUI.app' to connect the UI to it"
+}
+
+_open_finder_windows() {
   printf "\nPlease add LuzidUI.app to Applications\n"
   osascript -e "
 tell application \"Finder\"
@@ -133,11 +151,6 @@ tell application \"Finder\"
   set bounds of Finder window 1 to {500, 0, 700, 200}
 end tell
 " > /dev/null
-
-  popd > /dev/null
-
-  echo "Launch it via the 'luzid' command from the terminal"
-  echo "Open the 'LuzidUI.app' to connect the UI to it"
 }
 
 linux_install() {

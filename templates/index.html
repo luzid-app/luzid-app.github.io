@@ -33,10 +33,14 @@
         <div class="col-lg-9 col-xl-8 text-center">
           <p class="lead">{{ section.extra.lead | default(value="Please start setting config.toml and adding your content.") | safe }}</p>
 
+        <p>
+        <a href="docs/getting-started/installation" class="btn btn-primary btn-lg px-4 mb-2" role="button">Install the latest Luzid Version</a>
+        </p>
+
         <a class="ml-onclick-form"
            href="javascript:void(0)"
            onclick="ml('show', 'ZBwYhW', true)">
-          Sign Up for Release Updates
+          Sign Up for Luzid Updates
         </a>
           <!--
           <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ get_url(path=section.extra.url | default(value="/")) | safe }}" role="button">{{ section.extra.url_button | default(value="Get started") }}</a>
@@ -72,11 +76,11 @@
 
         <div class="col-lg-5">
           <h2 class="h4">Effortless Setup</h2>
-          <p>Install a fully-functional application with an embedded Solana test validator in a single click.</p>
+          <p>Install the Luzid backend and UI via simple <a href="docs/getting-started/installation">install step</a>.</p>
         </div>
         <div class="col-lg-5">
           <h2 class="h4">Fast by default ⚡️</h2>
-          <p>Luzid operates directly on the embedded test validator, using slower transactions only when needed.</p>
+          <p>Luzid embeds the blazingly fast MagicBlock validator and thus is optimised for speed.</p>
         </div>
         <div class="col-lg-5">
           <h2 class="h4">Enhanced Test Validator</h2>
@@ -91,8 +95,8 @@
           <p>Save and restore snapshots of account states without restarting the validator.</p>
         </div>
         <div class="col-lg-5">
-          <h2 class="h4">Dynamic Validator Control</h2>
-          <p>Start and stop the validator as needed without impacting the application, enabling efficient testing and experimentation.</p>
+          <h2 class="h4">Workspace Discovery</h2>
+          <p>Luzid will scan your workspace and automatically load all your programs to have you up and running in no time.</p>
         </div>
       {% endif %}
     </div>

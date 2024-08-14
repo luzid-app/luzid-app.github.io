@@ -28,13 +28,13 @@ weight = 20
 [[extra.menu.main]]
 name = "Getting Started"
 section = "getting-started"
-url = "/getting-started/"
+url = "/docs/getting-started/installation"
 weight = 20
 
 [[extra.menu.main]]
 name = "SDK Docs"
 section = "sdk-docs"
-url = "/luzid-sdk/docs/ts/classes/_luzid_sdk.luzid_sdk.LuzidSdk.html"
+url = "/luzid-sdk/docs/ts/classes/luzid_sdk.LuzidSdk.html"
 weight = 20
 
 +++
