@@ -20,19 +20,19 @@ url = "/"
 weight = 20
 
 [[extra.menu.main]]
+name = "Documentation"
+section = "luzidapp"
+url = "/docs/getting-started/installation"
+weight = 20
+
+[[extra.menu.main]]
 name = "Blog"
 section = "blog"
 url = "/blog/"
 weight = 20
 
 [[extra.menu.main]]
-name = "Getting Started"
-section = "getting-started"
-url = "/docs/getting-started/installation"
-weight = 20
-
-[[extra.menu.main]]
-name = "SDK Docs"
+name = "@luzid/sdk"
 section = "sdk-docs"
 url = "/luzid-sdk/docs/ts/classes/luzid_sdk.LuzidSdk.html"
 weight = 20
