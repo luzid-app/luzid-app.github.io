@@ -1,9 +1,9 @@
 +++
-title = "Mutatator"
+title = "Mutating and Cloning Accounts"
 date = 2024-06-30T08:00:00+00:00
 updated = 2024-06-30T08:00:00+00:00
 draft = false
-weight = 10
+weight = 20
 sort_by = "weight"
 template = "docs/page.html"
 
@@ -39,7 +39,6 @@ We can modify each property of an account via the relevant `set` methods, namely
 - [`setData`](https://luzid.app/luzid-sdk/docs/ts/classes/api_mutator.AccountModification.html#setData)
 - [`setExecutable`](https://luzid.app/luzid-sdk/docs/ts/classes/api_mutator.AccountModification.html#setExecutable)
 
-
 <details>
 <summary>Full Example</summary>
 <p class="codepen" data-height="600" data-theme-id="dark" data-default-tab="js,result" data-slug-hash="oNrpjgp" data-pen-title="Luzid: Mutate Account" data-preview="true" data-editable="true" data-user="thlorenz" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
@@ -47,12 +46,13 @@ We can modify each property of an account via the relevant `set` methods, namely
   Luzid: Mutate Account</a> by Thorsten Lorenz (<a href="https://codepen.io/thlorenz">@thlorenz</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 </details>
 
 ## Clone Account
 
 In order to clone an account into the Luzid validator you provide the remote cluster as well as
-the address of the account to clone. Optionally you can provide a `commitment` level of that
+the address of the account to clone. Optionally you can provide a `commitment` level that
 the account must have reached on the remote cluster.
 
 ```ts
@@ -73,6 +73,8 @@ await luzid.mutator.cloneAccount(Cluster.Devnet, postAddr, {
   Luzid: Clone Account</a> by Thorsten Lorenz (<a href="https://codepen.io/thlorenz">@thlorenz</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 </details>
 
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<br>
+NOTE: the above example demonstrates both cloning a program account and modifying another account.
