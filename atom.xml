@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Luzid</title>
+    <subtitle>Luzid: Solana Development at Light Speed</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://luzid.app/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://luzid.app"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-08-19T15:00:00+00:00</updated>
+    <id>https://luzid.app/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Luzid Beta Release v0.1</title>
+        <published>2024-08-19T15:00:00+00:00</published>
+        <updated>2024-08-19T15:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/blog/luzid-release-v0-1/"/>
+        <id>https://luzid.app/blog/luzid-release-v0-1/</id>
+        
+        <content type="html" xml:base="https://luzid.app/blog/luzid-release-v0-1/">&lt;h2 id=&quot;features&quot;&gt;Features&lt;&#x2F;h2&gt;
+&lt;p&gt;Many features were added to Luzid since the &lt;a href=&quot;https:&#x2F;&#x2F;luzid.app&#x2F;blog&#x2F;luzid-release-v0-1&#x2F;luzid-alpha-release-separate-binary&quot;&gt;last release&lt;&#x2F;a&gt;
+thus Luzid now provides the following:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;blazing fast validator 🚀&lt;&#x2F;li&gt;
+&lt;li&gt;clones &lt;em&gt;remote&lt;&#x2F;em&gt; programs on demand&lt;&#x2F;li&gt;
+&lt;li&gt;clones&#x2F;watches &lt;em&gt;local&lt;&#x2F;em&gt; programs via the workspace feature&lt;&#x2F;li&gt;
+&lt;li&gt;watches transactions live&lt;&#x2F;li&gt;
+&lt;li&gt;multiple ways to inspect transactions and account data including how account data changed
+over time&lt;&#x2F;li&gt;
+&lt;li&gt;direct account mutation&lt;&#x2F;li&gt;
+&lt;li&gt;saving&#x2F;restoring snapshots of account data&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Particularly the workspace feature which allows you to &lt;em&gt;hotswap&lt;&#x2F;em&gt; programs everytime changes are
+saved to disk is a game changer and has everyone I show this quite impressed.&lt;&#x2F;p&gt;
+&lt;p&gt;I created a playlist on YouTube with each video going into a particular feature one by one:&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;videoseries?si=QZ1UAMMdrhCKnCUn&amp;amp;list=PL4k64WemroGnAZEDS9yWvLraXQw8TsA9h&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+&lt;br&gt;
+&lt;h2 id=&quot;docs&quot;&gt;Docs&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;luzid-app&quot;&gt;Luzid App&lt;&#x2F;h3&gt;
+&lt;p&gt;In order to help you get started with Luzid we now have detailed documentation. You can start
+with the &lt;a href=&quot;..&#x2F;..&#x2F;docs&#x2F;luzidapp&#x2F;01-features&#x2F;&quot;&gt;features section&lt;&#x2F;a&gt; and then work your way through
+the Luzid pages, one by one, i.e. the &lt;a href=&quot;..&#x2F;..&#x2F;docs&#x2F;luzidapp&#x2F;03-transactions&#x2F;&quot;&gt;transactions&lt;&#x2F;a&gt;
+page.&lt;&#x2F;p&gt;
+&lt;p&gt;Each refers to videos that demonstrate the documented feature.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sdk-docs&quot;&gt;SDK Docs&lt;&#x2F;h3&gt;
+&lt;p&gt;In order to control Luzid from within your tests an SDK is provided. Aside from the &lt;a href=&quot;http:&#x2F;&#x2F;luzid.app&#x2F;luzid-sdk&#x2F;docs&#x2F;ts&#x2F;classes&#x2F;luzid_sdk.LuzidSdk.html&quot;&gt;SDK API
+docs&lt;&#x2F;a&gt; a section for each
+commonly SDK feature is included as well.&lt;&#x2F;p&gt;
+&lt;p&gt;Start by reading &lt;a href=&quot;..&#x2F;..&#x2F;docs&#x2F;luzidsdk&#x2F;01-sdk-intro&quot;&gt;the SDK docs overview&lt;&#x2F;a&gt; carefully.
+Many docs include live examples which allow you to try out the SDK right from your browser.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;streamed-luzid-updates&quot;&gt;Streamed Luzid Updates&lt;&#x2F;h2&gt;
+&lt;p&gt;Finally if you want to learn more details about this release, how things work under the hood
+and future plans for Luzid, I recommend to watch the below stream recording I did with the
+Solana DevRel team.&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;Ucw3halF1Nc?si=JQYAPjI8XOR6kOhX&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+&lt;h2 id=&quot;installing-the-new-version&quot;&gt;Installing the new Version&lt;&#x2F;h2&gt;
+&lt;p&gt;The docs provide &lt;a href=&quot;..&#x2F;..&#x2F;docs&#x2F;getting-started&#x2F;installation&#x2F;&quot;&gt;detailed installation instructions&lt;&#x2F;a&gt;,
+including a simple script that performs all installation steps for you.&lt;&#x2F;p&gt;
+&lt;p&gt;This Luzid version also detects new versions automatically and will alert you when you should
+run that script again in the future in order to get the latest and greatest Luzid.&lt;&#x2F;p&gt;
+&lt;p&gt;If you run into any issues please post them inside the
+&lt;code&gt;🪲 ︱luzid-issues&lt;&#x2F;code&gt; channel in the &lt;a href=&quot;https:&#x2F;&#x2F;discord.com&#x2F;invite&#x2F;MBkdC3gxcv&quot;&gt;MagicBlock Discord&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Installation</title>
+        <published>2024-06-30T08:00:00+00:00</published>
+        <updated>2024-06-30T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/docs/getting-started/installation/"/>
+        <id>https://luzid.app/docs/getting-started/installation/</id>
+        
+        <content type="html" xml:base="https://luzid.app/docs/getting-started/installation/">&lt;h3 id=&quot;macos-and-linux-users&quot;&gt;MacOS and Linux Users&lt;&#x2F;h3&gt;
+&lt;html&gt;
+&lt;style&gt;
+.pre {
+  padding: 20px 20px;
+  white-space: no-wrap;
+  width: 460px;
+}
+&lt;&#x2F;style&gt;
+&lt;p&gt;Run the below script in your terminal to install Luzid.&lt;&#x2F;p&gt;
+&lt;pre id=&quot;install-text&quot; class=&quot;pre&quot;&gt;
+sh -c &quot;$(curl -sSfL https:&#x2F;&#x2F;luzid.app&#x2F;install.sh)&quot;
+&lt;&#x2F;pre&gt;
+&lt;button type=&quot;button&quot; class=&quot;copy-btn btn btn-primary&quot; data-clipboard-target=&quot;#install-text&quot;&gt;
+    Copy
+&lt;&#x2F;button&gt;
+&lt;script&gt;new ClipboardJS(&#x27;.copy-btn&#x27;);&lt;&#x2F;script&gt;
+&lt;&#x2F;html&gt;
+&lt;h3 id=&quot;windows-users&quot;&gt;Windows Users&lt;&#x2F;h3&gt;
+&lt;p&gt;Installation on Windows is a bit more hands-on.&lt;&#x2F;p&gt;
+&lt;p&gt;You can run the above script inside a WSL terminal which will install the Linux parts.
+Then please follow these &lt;a href=&quot;..&#x2F;windows-installation&quot;&gt;detailed notes&lt;&#x2F;a&gt; in order to get the
+UI setup and connecting to the &lt;code&gt;luzid&lt;&#x2F;code&gt; running in the WSL environment.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Running Luzid</title>
+        <published>2024-06-30T08:00:00+00:00</published>
+        <updated>2024-06-30T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/docs/getting-started/running-luzid/"/>
+        <id>https://luzid.app/docs/getting-started/running-luzid/</id>
+        
+        <content type="html" xml:base="https://luzid.app/docs/getting-started/running-luzid/">&lt;p&gt;The &lt;a href=&quot;..&#x2F;installation&quot;&gt;Installation&lt;&#x2F;a&gt; script will install two pieces on your machine&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;luzid&lt;&#x2F;code&gt; executable which embedds the MagicBlock validator and is all you need to run tests&lt;&#x2F;li&gt;
+&lt;li&gt;the luzid UI which can be started optionally to interact with the &lt;code&gt;luzid&lt;&#x2F;code&gt; backend&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;running-the-backend&quot;&gt;Running the Backend&lt;&#x2F;h3&gt;
+&lt;p&gt;There are numerous ways to start up the backend.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;start-with-workspace-discovery&quot;&gt;Start with Workspace Discovery&lt;&#x2F;h4&gt;
+&lt;p&gt;This is the recommended way to start the backend as it will automatically find all the programs
+the workspace contained in the current directory.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;luzid&lt;&#x2F;span&gt;&lt;span&gt; .
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;It will clone all the programs into the validator and watch them for changes, which means all
+that&#x27;s need to refresh them in the validator is to compile them via &lt;code&gt;cargo build-sbf&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Running &lt;code&gt;luzid&lt;&#x2F;code&gt; with that &lt;code&gt;.&lt;&#x2F;code&gt; is essentially the same as running it with the below
+configuration.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[[workspace]]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;path &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;start-without-any-configuration&quot;&gt;Start Without any Configuration&lt;&#x2F;h4&gt;
+&lt;p&gt;The simplest way to start the backend is to run the &lt;code&gt;luzid&lt;&#x2F;code&gt; command in your terminal.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;luzid
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;However no local programs will be loaded by default and you&#x27;ll have to either add a workspace
+manually or depend on all programs being available on &lt;code&gt;devnet&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Alternatively you can of course also deploy your programs as usual, but are then loosing out on
+Luzid&#x27;s &lt;em&gt;hot swap&lt;&#x2F;em&gt; feature.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;running-the-ui&quot;&gt;Running the UI&lt;&#x2F;h3&gt;
+&lt;p&gt;In order to gain insight into your transactions and interact with the luzid backend you
+will most likely want to lauch the UI as well.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;on MacOS open the &lt;code&gt;LuzidUI.app&lt;&#x2F;code&gt;to do that&lt;&#x2F;li&gt;
+&lt;li&gt;on Linux run the &lt;code&gt;luzidui&lt;&#x2F;code&gt; command in your terminal&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;If the backend is not running yet then it will wait for you to start it.&lt;&#x2F;p&gt;
+&lt;p&gt;You can stop and start the backend as many times as you like, the UI will reconnect to it.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Windows Installation</title>
+        <published>2024-06-30T08:00:00+00:00</published>
+        <updated>2024-06-30T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/docs/getting-started/windows-installation/"/>
+        <id>https://luzid.app/docs/getting-started/windows-installation/</id>
+        
+        <content type="html" xml:base="https://luzid.app/docs/getting-started/windows-installation/">&lt;h2 id=&quot;installation-instructions&quot;&gt;Installation Instructions&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;1-install-and-run-the-luzid-backend&quot;&gt;1. Install and Run the Luzid Backend&lt;&#x2F;h3&gt;
+&lt;p&gt;Open a WSL terminal in admin mode as shown in the below screenshot:&lt;&#x2F;p&gt;
+&lt;img width=&quot;380&quot; alt=&quot;wsl-as-admin&quot; src=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;assets&#x2F;192891&#x2F;a1d25dab-a449-4ea6-9c05-df388ee5550d&quot;&gt;
+&lt;p&gt;Then run the script provided on the &lt;a href=&quot;&#x2F;docs&#x2F;getting-started&#x2F;installation&quot;&gt;main installation page&lt;&#x2F;a&gt; in order to install the Linux version.&lt;&#x2F;p&gt;
+&lt;p&gt;Now launch it via &lt;code&gt;luzid&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;NOTE: this will also install the &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;bin&#x2F;luzidui&lt;&#x2F;code&gt; and &lt;code&gt;&#x2F;usr&#x2F;local&#x2F;lib&#x2F;luzidui&#x2F;&lt;&#x2F;code&gt; which
+only works on Linux. You can remove that if you want.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;2-download-and-extract-the-luzidui&quot;&gt;2. Download and Extract the LuzidUI&lt;&#x2F;h3&gt;
+&lt;p&gt;Next download the LuzidUI from &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;releases&#x2F;download&#x2F;windows-v0.0.3&#x2F;luzidui.zip&quot;&gt;here&lt;&#x2F;a&gt;,
+extract it to a directory of your choice and launch the &lt;code&gt;luzidui.exe&lt;&#x2F;code&gt; from inside the extracted
+&lt;code&gt;luzidui&lt;&#x2F;code&gt; directory.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;3-run-the-luzidui-and-work-through-windows-warning-dialog&quot;&gt;3. Run the LuzidUI and work through Windows Warning Dialog&lt;&#x2F;h3&gt;
+&lt;p&gt;The very first time you&#x27;ll most likely see a below warning, which you can work around by clicking
+&lt;code&gt;More Info&lt;&#x2F;code&gt; and then &lt;code&gt;Run Anyway&lt;&#x2F;code&gt; as shown in the screenshots below:
+&lt;br&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img width=&quot;250&quot; alt=&quot;windows-defender-01&quot; src=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;assets&#x2F;192891&#x2F;62c6b90f-2edd-46b0-a727-59a93ecf4222&quot;&gt;&lt;img width=&quot;250&quot; alt=&quot;windows-defender-02&quot; src=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;assets&#x2F;192891&#x2F;f026623a-ceef-4d32-a8f8-dd4d7e6ff9f3&quot;&gt;&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;install-missing-dependencies&quot;&gt;Install Missing Dependencies&lt;&#x2F;h4&gt;
+&lt;p&gt;In case you&#x27;re missing Windows developer tools you&#x27;ll see the following prompt:&lt;&#x2F;p&gt;
+&lt;img width=&quot;371&quot; alt=&quot;missing-dotnet-dll&quot; src=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;assets&#x2F;192891&#x2F;a68006f0-2aed-4cd8-a5fd-19f0d92e7441&quot;&gt;
+&lt;p&gt;If you encounter this install the &lt;a href=&quot;https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;cpp&#x2F;windows&#x2F;latest-supported-vc-redist?view=msvc-170&quot;&gt;Latest Microsoft Visual C++ Redistributable Version&lt;&#x2F;a&gt; and make sure to select a downloadable that matches your architecture.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;4-run-luzidui-and-connect-it-to-the-luzid-backend&quot;&gt;4. Run LuzidUI and Connect it to the Luzid Backend&lt;&#x2F;h3&gt;
+&lt;p&gt;Now try to start the UI again and it should connect to the backend running in the WSL terminal.
+Go to &lt;em&gt;Transactions&lt;&#x2F;em&gt; and click the &lt;em&gt;Anchor Tic Tac Toe&lt;&#x2F;em&gt; link to play around with the app while
+keeping an eye on Luzid.&lt;&#x2F;p&gt;
+&lt;img width=&quot;600&quot; alt=&quot;luzid-on-windows&quot; src=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;assets&#x2F;192891&#x2F;98ee2bf6-b6a4-4200-bfc1-25c3160b51b6&quot;&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Features</title>
+        <published>2024-06-30T08:00:00+00:00</published>
+        <updated>2024-06-30T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/docs/luzidapp/01-features/"/>
+        <id>https://luzid.app/docs/luzidapp/01-features/</id>
+        
+        <content type="html" xml:base="https://luzid.app/docs/luzidapp/01-features/">&lt;ul&gt;
+&lt;li&gt;blazing fast validator&lt;&#x2F;li&gt;
+&lt;li&gt;clones remote programs on demand&lt;&#x2F;li&gt;
+&lt;li&gt;clones&#x2F;watches local programs via workspace feature&lt;&#x2F;li&gt;
+&lt;li&gt;watches transactions live&lt;&#x2F;li&gt;
+&lt;li&gt;supports account mutation&lt;&#x2F;li&gt;
+&lt;li&gt;multiple ways to inspect transactions and account data&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Dashboard</title>
+        <published>2024-06-30T08:00:00+00:00</published>
+        <updated>2024-06-30T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/docs/luzidapp/02-dashboard/"/>
+        <id>https://luzid.app/docs/luzidapp/02-dashboard/</id>
+        
+        <content type="html" xml:base="https://luzid.app/docs/luzidapp/02-dashboard/">&lt;p&gt;The Luzid Dashboard provides access to the following information:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;luzid stats&lt;&#x2F;li&gt;
+&lt;li&gt;validator status like current slot and transaction count&lt;&#x2F;li&gt;
+&lt;li&gt;validator config&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;All the values can be copied to the clipboard by clicking on them.&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot;
+src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;FUSRulei09o?si=3jFrFoOdj6f-mVGw&amp;amp;start=60&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+&lt;p&gt;NOTE: that the dashboard like all the other sections only are active once the luzid backend is
+running and the Luzid UI connected to it.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Transactions</title>
+        <published>2024-06-30T08:00:00+00:00</published>
+        <updated>2024-06-30T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/docs/luzidapp/03-transactions/"/>
+        <id>https://luzid.app/docs/luzidapp/03-transactions/</id>
+        
+        <content type="html" xml:base="https://luzid.app/docs/luzidapp/03-transactions/">&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;list of transactions sorted by most recent&lt;&#x2F;li&gt;
+&lt;li&gt;updated live&lt;&#x2F;li&gt;
+&lt;li&gt;access to transaction details and account inspection&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;FUSRulei09o?si=CSgQsBhC2k0arN9a&amp;amp;start=147&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+&lt;h2 id=&quot;sections&quot;&gt;Sections&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;list-of-transactions&quot;&gt;List of Transactions&lt;&#x2F;h3&gt;
+&lt;p&gt;On the left a list of processed transactions is shown ordered by most recent. The list is
+updated live and shows the following information for each transaction:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;slot in which the transaction was processed&lt;&#x2F;li&gt;
+&lt;li&gt;label&#x2F;signature of the transaction&lt;&#x2F;li&gt;
+&lt;li&gt;number of accounts involved in the transaction (signer&#x2F;writable&#x2F;readonly)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;yyVF_fgHonQ?si=7YKrYD2jbOYcX2b7&amp;amp;start=52&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+&lt;h3 id=&quot;transaction-details-and-shortcuts&quot;&gt;Transaction Details and Shortcuts&lt;&#x2F;h3&gt;
+&lt;p&gt;On the upper upper left we can see details for each selected transaction including a toolbar
+with support for the following actions:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;quick open transaction logs &lt;code&gt;[o]&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;quick open transaction in explorer &lt;code&gt;[e]&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;yyVF_fgHonQ?si=oEmUc1w6Ac4cDjEX&amp;amp;start=230&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+&lt;h3 id=&quot;transaction-accounts&quot;&gt;Transaction Accounts&lt;&#x2F;h3&gt;
+&lt;p&gt;Shows summary of each account that was involved in the transaction.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;account address&#x2F;label&lt;&#x2F;li&gt;
+&lt;li&gt;lamport change incurred by the transaction&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;writable&lt;&#x2F;em&gt;, &lt;em&gt;signer&lt;&#x2F;em&gt; or &lt;em&gt;program&lt;&#x2F;em&gt; attributes&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;We can bring up the details of the account and how it was affected by the transaction by
+clicking on an account row. This will open a diff view showing the following account properties
+before and after the transaction:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;address&lt;&#x2F;li&gt;
+&lt;li&gt;balance&lt;&#x2F;li&gt;
+&lt;li&gt;owner&lt;&#x2F;li&gt;
+&lt;li&gt;data size&lt;&#x2F;li&gt;
+&lt;li&gt;executable flag&lt;&#x2F;li&gt;
+&lt;li&gt;rent epoch&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;For accounts holding data it provides the ability open the &lt;a href=&quot;..&#x2F;04-accounts&quot;&gt;Account Data Inspector&lt;&#x2F;a&gt; in a
+separate page.&lt;&#x2F;p&gt;
+&lt;p&gt;Accounts can also be opened via a keyboard shortcut &lt;code&gt;[1]..[9]&lt;&#x2F;code&gt; or &lt;code&gt;[0]&lt;&#x2F;code&gt; for the 10th account.&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot;
+src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;yyVF_fgHonQ?si=EDtHDnDjvyXALYui&amp;amp;start=274&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Accounts Inspector</title>
+        <published>2024-06-30T08:00:00+00:00</published>
+        <updated>2024-06-30T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/docs/luzidapp/04-accounts-inspector/"/>
+        <id>https://luzid.app/docs/luzidapp/04-accounts-inspector/</id>
+        
+        <content type="html" xml:base="https://luzid.app/docs/luzidapp/04-accounts-inspector/">&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;&#x2F;h2&gt;
+&lt;p&gt;The account inspector allows us to inspect account states over time. For each transaction the
+account was involved in a diff is available that compares the state of the account before and
+after the transaction respectively.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;details&quot;&gt;Details&lt;&#x2F;h2&gt;
+&lt;p&gt;We can open the diff of an account in the following ways:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;by selecting &lt;em&gt;Inspect Account Data&lt;&#x2F;em&gt; from the details view of a transaction account&lt;&#x2F;li&gt;
+&lt;li&gt;by selecting &lt;em&gt;Inspect&lt;&#x2F;em&gt; from the account data view of a &lt;em&gt;Development Account&lt;&#x2F;em&gt; or &lt;em&gt;Snapshot Account&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The diff has three sections:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;the top showing only the properties that changed&lt;&#x2F;li&gt;
+&lt;li&gt;the middle showing the complete JSON of the account state before and after the transaction&lt;&#x2F;li&gt;
+&lt;li&gt;the bottom toolbar allowing us to cycle through the history of the account state&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Additionally the toolbar on the top right provides us with the following actions (from left to
+right):&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[o]&lt;&#x2F;code&gt; quick open logs of the transaction in which the account state was updated&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;[e]&lt;&#x2F;code&gt; quick open transaction in which the account state was updated in the explorer&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;[n]&lt;&#x2F;code&gt; navigate to the transaction in which the account state was updated&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;[a]&lt;&#x2F;code&gt; quick open account in explorer which will show its current state&lt;&#x2F;li&gt;
+&lt;li&gt;toggle to switch between &lt;em&gt;raw&lt;&#x2F;em&gt; and &lt;em&gt;parsed&lt;&#x2F;em&gt; data view&lt;&#x2F;li&gt;
+&lt;li&gt;x button to close the diff view&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;yyVF_fgHonQ?si=VCZggjXwc4eI4IpX&amp;amp;start=340&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Accounts</title>
+        <published>2024-06-30T08:00:00+00:00</published>
+        <updated>2024-06-30T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/docs/luzidapp/05-accounts/"/>
+        <id>https://luzid.app/docs/luzidapp/05-accounts/</id>
+        
+        <content type="html" xml:base="https://luzid.app/docs/luzidapp/05-accounts/">&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;&#x2F;h2&gt;
+&lt;p&gt;The accounts page provides us with three tabs:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Development Accounts: a list of &lt;em&gt;relevant&lt;&#x2F;em&gt; accounts that are present in the validator&lt;&#x2F;li&gt;
+&lt;li&gt;Account Snapshots: allows managing snapshots we took previously&lt;&#x2F;li&gt;
+&lt;li&gt;Remote Accounts: allows to clone accounts from remote clusters like mainnet-beta or devnet&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;details&quot;&gt;Details&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;development-accounts&quot;&gt;Development Accounts&lt;&#x2F;h3&gt;
+&lt;p&gt;Lists of accounts with each showing the following information:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;a checkmark to select the account&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Pubkey&lt;&#x2F;strong&gt; of the account&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;SOL&lt;&#x2F;strong&gt; balance of the account&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Owner&lt;&#x2F;strong&gt; of the account&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Bytes&lt;&#x2F;strong&gt; of data of the account&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Slot&lt;&#x2F;strong&gt; at which the account was last updated&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;If the account has data then the bytes of the account will be non-zero and &lt;ins&gt;underlined&lt;&#x2F;ins&gt; to
+indicate that we can click on it to inspect in order to inspect its data.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;saving-snapshots&quot;&gt;Saving Snapshots&lt;&#x2F;h4&gt;
+&lt;p&gt;From the &lt;em&gt;Development Accounts&lt;&#x2F;em&gt; tab follow the below steps to create a snapshot:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;select any number of accounts by clicking on the checkmark next to it&lt;&#x2F;li&gt;
+&lt;li&gt;click the &lt;em&gt;Create Snapshot&lt;&#x2F;em&gt; button that will appear at the bottom of the page&lt;&#x2F;li&gt;
+&lt;li&gt;provide a name and optional description for the snapshot&lt;&#x2F;li&gt;
+&lt;li&gt;click &lt;em&gt;Create&lt;&#x2F;em&gt; to save the snapshot&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;icacXbm3pdo?si=6aGOh9x9G3D1CIi5&amp;amp;start=60&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+&lt;h3 id=&quot;managing-snapshots&quot;&gt;Managing Snapshots&lt;&#x2F;h3&gt;
+&lt;p&gt;The &lt;em&gt;Account Snapshots&lt;&#x2F;em&gt; tab shows a list of snapshots with the following information:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Name&lt;&#x2F;strong&gt; of the snapshot&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Description&lt;&#x2F;strong&gt; of the snapshot&lt;&#x2F;li&gt;
+&lt;li&gt;number of &lt;strong&gt;Accounts&lt;&#x2F;strong&gt; in the snapshot&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Created At&lt;&#x2F;strong&gt; of the snapshot&lt;&#x2F;li&gt;
+&lt;li&gt;a recycle bin icon to delete the snapshot&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;We can select a snapshot row and the accounts that are part of the snapshot will be listed below.
+We can then click on any of those accounts to inspect the data that it contained when the
+snapshot was taken.&lt;&#x2F;p&gt;
+&lt;p&gt;A &lt;em&gt;Restore&lt;&#x2F;em&gt; button will appear at the bottom of the page when an account in the snapshot is
+selected which allows us to restore the state of the account into the validator.&lt;&#x2F;p&gt;
+&lt;p&gt;Each time we restore a snapshot a &lt;em&gt;Restore&lt;&#x2F;em&gt; transaction is processed in the Luzid validator and
+will appear in the list of transactions.&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;icacXbm3pdo?si=Xvg70dTSLW2Jx_4G&amp;amp;start=138&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+&lt;h3 id=&quot;remote-accounts&quot;&gt;Remote Accounts&lt;&#x2F;h3&gt;
+&lt;p&gt;The &lt;em&gt;Remote Accounts&lt;&#x2F;em&gt; tab allows us to clone accounts from remote clusters like mainnet-beta or
+devnet via the following steps:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Paste the pubkey of the account we want to clone into the &lt;em&gt;Account Address&lt;&#x2F;em&gt; field&lt;&#x2F;li&gt;
+&lt;li&gt;Luzid will retrieve the state of the account from each remote cluster and populate the
+respective column&lt;&#x2F;li&gt;
+&lt;li&gt;Click the &lt;em&gt;Clone&lt;&#x2F;em&gt; button of the cluster we want to clone the account from&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Each time we clone an account a &lt;em&gt;Clone&lt;&#x2F;em&gt; transaction is processed in the Luzid validator and
+will appear in the list of transactions.&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;icacXbm3pdo?si=7xo9q7O2s3Ghwr2h&amp;amp;start=335&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Workspaces</title>
+        <published>2024-06-30T08:00:00+00:00</published>
+        <updated>2024-06-30T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/docs/luzidapp/06-workspaces/"/>
+        <id>https://luzid.app/docs/luzidapp/06-workspaces/</id>
+        
+        <content type="html" xml:base="https://luzid.app/docs/luzidapp/06-workspaces/">&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;&#x2F;h2&gt;
+&lt;p&gt;Luzid workspaces are designed to shorten the feedback loop for smart contract developers.
+They allow cloning all programs of a project into the validator and repeat that step
+automatically anytime the program is recompiled.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;details&quot;&gt;Details&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;registering-a-workspace-automatically&quot;&gt;Registering a Workspace Automatically&lt;&#x2F;h3&gt;
+&lt;p&gt;This is the quickest, easiest and therefore recommended way to register a workspace. Simply
+launch Luzid from the root of your project with the trailing &lt;code&gt;.&lt;&#x2F;code&gt; as shown below:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;luzid&lt;&#x2F;span&gt;&lt;span&gt; .
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Luzid will then discover all programs and IDLs in that project, clone them into the validator
+and start watching them for changes.&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;MxcOIiRVhvM?si=0B9HMBEvkoAotDi4&amp;amp;start=116&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+&lt;h3 id=&quot;registering-a-workspace-via-the-ui&quot;&gt;Registering a Workspace via the UI&lt;&#x2F;h3&gt;
+&lt;p&gt;You can also manually register a workspace as follow:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Navigate to the &lt;em&gt;Workspaces&lt;&#x2F;em&gt; tab in the Luzid UI and click &lt;em&gt;Add&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Paste the path to the root of your project into the &lt;em&gt;Workspace Directory&lt;&#x2F;em&gt; field&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Review the programs and IDLs that Luzid discovered and click &lt;em&gt;Add&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;a. Either click &lt;em&gt;Clone&lt;&#x2F;em&gt; in order to clone all programs and IDLs of the workspace once&lt;&#x2F;p&gt;
+&lt;p&gt;b. Or click &lt;em&gt;Watch&lt;&#x2F;em&gt; in order to clone all programs and IDLs of the workspace and watch them
+for changes afterwards&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;MxcOIiRVhvM?si=T9O41tPfGuGUa4af&amp;amp;start=28&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Introduction</title>
+        <published>2024-06-30T08:00:00+00:00</published>
+        <updated>2024-06-30T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/docs/luzidsdk/01-sdk-intro/"/>
+        <id>https://luzid.app/docs/luzidsdk/01-sdk-intro/</id>
+        
+        <content type="html" xml:base="https://luzid.app/docs/luzidsdk/01-sdk-intro/">&lt;p&gt;Welcome to the high-level overview of the Luzid TypeScript SDK.&lt;&#x2F;p&gt;
+&lt;p&gt;We included a page for each of Luzid&#x27;s API, i.e. &lt;code&gt;mutator&lt;&#x2F;code&gt;, &lt;code&gt;snapshots&lt;&#x2F;code&gt; and so on.&lt;&#x2F;p&gt;
+&lt;p&gt;For each method a short description and example are provided. Where it made sense full example
+is provided as well.&lt;&#x2F;p&gt;
+&lt;p&gt;For more detailed API information please refer to the hosted SDK documentation for each
+particular language:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;luzid.app&#x2F;luzid-sdk&#x2F;docs&#x2F;ts&#x2F;classes&#x2F;luzid_sdk.LuzidSdk.html&quot;&gt;TypeScript&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;running-examples&quot;&gt;Running Examples&lt;&#x2F;h2&gt;
+&lt;p&gt;Whenever a full example is provided it is folded up like so:&lt;&#x2F;p&gt;
+&lt;p&gt;
+&lt;details&gt;
+&lt;summary&gt;Full Example&lt;&#x2F;summary&gt;
+Full Example that you can run will be here.
+&lt;&#x2F;details&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;You can read through the examples and you can run them as well. To do that you need the
+following:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Run the &lt;code&gt;luzid&lt;&#x2F;code&gt; backend in a terminal on your machine&lt;&#x2F;li&gt;
+&lt;li&gt;Run the Luzid UI on your machine&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Now each example will be able to connect to the locally running luzid and you can inspect the
+results in the UI.&lt;&#x2F;p&gt;
+&lt;p&gt;TIP:&lt;&#x2F;p&gt;
+&lt;p&gt;NOTE: that the imports are prefixed with &lt;code&gt;https:&#x2F;&#x2F;esm.sh&#x2F;&lt;&#x2F;code&gt; which is only needed when running
+them on CodePen. You would import the packages as usual without that prefix.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;running-examples-on-codepen&quot;&gt;Running Examples on CodePen&lt;&#x2F;h2&gt;
+&lt;p&gt;You may prefer to run the examples directly on CodePen. Therefore they are provided inside a
+&lt;a href=&quot;https:&#x2F;&#x2F;codepen.io&#x2F;collection&#x2F;MgkZdm&quot;&gt;single collection&lt;&#x2F;a&gt; that you can access.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Mutating and Cloning Accounts</title>
+        <published>2024-06-30T08:00:00+00:00</published>
+        <updated>2024-06-30T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/docs/luzidsdk/02-mutate-accounts/"/>
+        <id>https://luzid.app/docs/luzidsdk/02-mutate-accounts/</id>
+        
+        <content type="html" xml:base="https://luzid.app/docs/luzidsdk/02-mutate-accounts/">&lt;p&gt;The Luzid &lt;code&gt;mutator&lt;&#x2F;code&gt; API allows you to mutate accounts by setting their state directly or by
+cloning them from a remote cluster.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;mutate-account&quot;&gt;Mutate Account&lt;&#x2F;h2&gt;
+&lt;p&gt;In the below example we prepate the mutation we want to apply via the
+&lt;a href=&quot;https:&#x2F;&#x2F;luzid.app&#x2F;luzid-sdk&#x2F;docs&#x2F;ts&#x2F;classes&#x2F;api_mutator.AccountModification.html&quot;&gt;&lt;code&gt;AccountModification&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; class. We then call &lt;code&gt;modifyAccount&lt;&#x2F;code&gt; on the &lt;code&gt;mutator&lt;&#x2F;code&gt; instance to apply the mutation.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;AccountModification&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;LuzidSdk &lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;@luzid&#x2F;sdk&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;luzid &lt;&#x2F;span&gt;&lt;span&gt;= new LuzidSdk()
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;luzid&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mutator&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;modifyAccount&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;AccountModification&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;forAddr&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;accountAddr&lt;&#x2F;span&gt;&lt;span&gt;).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;setData&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Buffer&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;from&lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Hello world! Hola mundo! Hallo Welt!&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;, &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;utf8&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;)
+&lt;&#x2F;span&gt;&lt;span&gt;  )
+&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;We can modify each property of an account via the relevant &lt;code&gt;set&lt;&#x2F;code&gt; methods, namely:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;luzid.app&#x2F;luzid-sdk&#x2F;docs&#x2F;ts&#x2F;classes&#x2F;api_mutator.AccountModification.html#setLamports&quot;&gt;&lt;code&gt;setLamports&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;luzid.app&#x2F;luzid-sdk&#x2F;docs&#x2F;ts&#x2F;classes&#x2F;api_mutator.AccountModification.html#setOwner&quot;&gt;&lt;code&gt;setOwner&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;luzid.app&#x2F;luzid-sdk&#x2F;docs&#x2F;ts&#x2F;classes&#x2F;api_mutator.AccountModification.html#setData&quot;&gt;&lt;code&gt;setData&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;luzid.app&#x2F;luzid-sdk&#x2F;docs&#x2F;ts&#x2F;classes&#x2F;api_mutator.AccountModification.html#setExecutable&quot;&gt;&lt;code&gt;setExecutable&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;details&gt;
+&lt;summary&gt;Full Example&lt;&#x2F;summary&gt;
+&lt;p class=&quot;codepen&quot; data-height=&quot;600&quot; data-theme-id=&quot;dark&quot; data-default-tab=&quot;js,result&quot; data-slug-hash=&quot;oNrpjgp&quot; data-pen-title=&quot;Luzid: Mutate Account&quot; data-preview=&quot;true&quot; data-editable=&quot;true&quot; data-user=&quot;thlorenz&quot; style=&quot;height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;&quot;&gt;
+  &lt;span&gt;See the Pen &lt;a href=&quot;https:&#x2F;&#x2F;codepen.io&#x2F;thlorenz&#x2F;pen&#x2F;oNrpjgp&quot;&gt;
+  Luzid: Mutate Account&lt;&#x2F;a&gt; by Thorsten Lorenz (&lt;a href=&quot;https:&#x2F;&#x2F;codepen.io&#x2F;thlorenz&quot;&gt;@thlorenz&lt;&#x2F;a&gt;)
+  on &lt;a href=&quot;https:&#x2F;&#x2F;codepen.io&quot;&gt;CodePen&lt;&#x2F;a&gt;.&lt;&#x2F;span&gt;
+&lt;&#x2F;p&gt;
+&lt;script async src=&quot;https:&#x2F;&#x2F;cpwebassets.codepen.io&#x2F;assets&#x2F;embed&#x2F;ei.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;&#x2F;details&gt;
+&lt;h2 id=&quot;clone-account&quot;&gt;Clone Account&lt;&#x2F;h2&gt;
+&lt;p&gt;In order to clone an account into the Luzid validator you provide the remote cluster as well as
+the address of the account to clone. Optionally you can provide a &lt;code&gt;commitment&lt;&#x2F;code&gt; level that
+the account must have reached on the remote cluster.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Cluster&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;LuzidSdk &lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;@luzid&#x2F;sdk&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;luzid &lt;&#x2F;span&gt;&lt;span&gt;= new LuzidSdk()
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;postAddr &lt;&#x2F;span&gt;&lt;span&gt;= &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;5ZspQX4nw95meJHpXBF425NytnNTDgtLBBGVDK9EWmRy&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;luzid&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mutator&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;cloneAccount&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Cluster&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Devnet&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;postAddr&lt;&#x2F;span&gt;&lt;span&gt;, {
+&lt;&#x2F;span&gt;&lt;span&gt;  commitment: &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;confirmed&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;,
+&lt;&#x2F;span&gt;&lt;span&gt;})
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;details&gt;
+&lt;summary&gt;Full Example&lt;&#x2F;summary&gt;
+&lt;p class=&quot;codepen&quot; data-height=&quot;600&quot; data-theme-id=&quot;dark&quot; data-default-tab=&quot;js,result&quot; data-slug-hash=&quot;VwJyeoa&quot; data-pen-title=&quot;Luzid: Clone Account&quot; data-preview=&quot;true&quot; data-editable=&quot;true&quot; data-user=&quot;thlorenz&quot; style=&quot;height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;&quot;&gt;
+  &lt;span&gt;See the Pen &lt;a href=&quot;https:&#x2F;&#x2F;codepen.io&#x2F;thlorenz&#x2F;pen&#x2F;VwJyeoa&quot;&gt;
+  Luzid: Clone Account&lt;&#x2F;a&gt; by Thorsten Lorenz (&lt;a href=&quot;https:&#x2F;&#x2F;codepen.io&#x2F;thlorenz&quot;&gt;@thlorenz&lt;&#x2F;a&gt;)
+  on &lt;a href=&quot;https:&#x2F;&#x2F;codepen.io&quot;&gt;CodePen&lt;&#x2F;a&gt;.&lt;&#x2F;span&gt;
+&lt;&#x2F;p&gt;
+&lt;script async src=&quot;https:&#x2F;&#x2F;cpwebassets.codepen.io&#x2F;assets&#x2F;embed&#x2F;ei.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;&#x2F;details&gt;
+&lt;br&gt;
+NOTE: the above example demonstrates both cloning a program account and modifying another account.
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Saving and Restoring Snapshots</title>
+        <published>2024-06-30T08:00:00+00:00</published>
+        <updated>2024-06-30T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/docs/luzidsdk/03-snapshots/"/>
+        <id>https://luzid.app/docs/luzidsdk/03-snapshots/</id>
+        
+        <content type="html" xml:base="https://luzid.app/docs/luzidsdk/03-snapshots/">&lt;p&gt;The Luzid &lt;code&gt;snapshot&lt;&#x2F;code&gt; API allows you to save snapshots, restore and delete them. It also
+supports grouping multiple snapshots to perform operations on them in batch.&lt;&#x2F;p&gt;
+&lt;p&gt;Here we go through all methods to manage snapshots first and provide a full example leveraging
+all of them at the bottom of this doc.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;save-account-snapshot&quot;&gt;Save Account Snapshot&lt;&#x2F;h2&gt;
+&lt;p&gt;In the below we create a snapshot with the following properties:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;&#x2F;strong&gt;: &lt;code&gt;&#x27;Luzid Snapshot Example&#x27;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;description&lt;&#x2F;strong&gt;: &lt;code&gt;&#x27;Snapshotting the account we just cloned&#x27;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;We include the following accounts:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[accAddr]&lt;&#x2F;code&gt; (an array of account addresses)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Finally we add the snapshot to the&lt;code&gt;&#x27;example:snapshot&#x27;&lt;&#x2F;code&gt; group.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;LuzidSdk &lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;@luzid&#x2F;sdk&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;luzid &lt;&#x2F;span&gt;&lt;span&gt;= new LuzidSdk()
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;res &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;luzid&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;snapshot&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;createSnapshot&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;  &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Luzid Snapshot Example&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;,
+&lt;&#x2F;span&gt;&lt;span&gt;  [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;accAddr&lt;&#x2F;span&gt;&lt;span&gt;],
+&lt;&#x2F;span&gt;&lt;span&gt;  {
+&lt;&#x2F;span&gt;&lt;span&gt;    group: &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;example:snapshot&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;,
+&lt;&#x2F;span&gt;&lt;span&gt;    description: &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Snapshotting the account we just cloned&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Created snapshot&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;res&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;snapshotId &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;res&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;snapshotId
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;listing-snapshots&quot;&gt;Listing Snapshots&lt;&#x2F;h2&gt;
+&lt;p&gt;We can then obtain a list of snapshots we saved as follows:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;snapshots &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;luzid&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;snapshot&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;listSnapshots&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Snapshots:&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;snapshots&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;getting-list-of-snapshotable-accounts&quot;&gt;Getting List of snapshotable Accounts&lt;&#x2F;h2&gt;
+&lt;p&gt;In order to get the addresses of all accounts we can snapshot we can use the following method:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;accounts &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;luzid&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;snapshot&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;getSnaphotableAccounts&lt;&#x2F;span&gt;&lt;span&gt;({ includeProgramAccounts: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true &lt;&#x2F;span&gt;&lt;span&gt;})
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Accounts we can snapshot:&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;accounts&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;the result includes information about each account like pubkey, modified slot and balance.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;restoring-a-snapshot&quot;&gt;Restoring a Snapshot&lt;&#x2F;h2&gt;
+&lt;p&gt;In order to restore accounts from a snapshot we provide the &lt;code&gt;snapshotId&lt;&#x2F;code&gt; and the addresses of
+the accounts we want to restore.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;res &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;luzid&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;snapshot&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;restoreAccountsFromSnapshot&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;snapshotId&lt;&#x2F;span&gt;&lt;span&gt;, {
+&lt;&#x2F;span&gt;&lt;span&gt;  accounts: [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;accAddr&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt;})
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;deleting-snapshots&quot;&gt;Deleting Snapshots&lt;&#x2F;h2&gt;
+&lt;p&gt;We can delete one specific snapshot by providing its &lt;code&gt;snapshotId&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;deletedSnapshotId &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;luzid&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;snapshot&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;deleteSnapshot&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;snapshotId&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Alternatively we can delete all snapshots in a group:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;deletedSnasphotIds &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;deleteSnapshotsMatching&lt;&#x2F;span&gt;&lt;span&gt;({ group: &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;example:snapshot&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39; })
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;full-example&quot;&gt;Full Example&lt;&#x2F;h2&gt;
+&lt;p&gt;The below lists snapshotable accounts, saves and restores a snapshot and finally deletes it.&lt;&#x2F;p&gt;
+&lt;details&gt;
+&lt;summary&gt;Full Example&lt;&#x2F;summary&gt;
+&lt;p class=&quot;codepen&quot; data-height=&quot;600&quot; data-theme-id=&quot;dark&quot; data-default-tab=&quot;js,result&quot; data-slug-hash=&quot;poXpyqM&quot; data-pen-title=&quot;Luzid: Snapshots&quot; data-preview=&quot;true&quot; data-editable=&quot;true&quot; data-user=&quot;thlorenz&quot; style=&quot;height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;&quot;&gt;
+  &lt;span&gt;See the Pen &lt;a href=&quot;https:&#x2F;&#x2F;codepen.io&#x2F;thlorenz&#x2F;pen&#x2F;poXpyqM&quot;&gt;
+  Luzid: Snapshots&lt;&#x2F;a&gt; by Thorsten Lorenz (&lt;a href=&quot;https:&#x2F;&#x2F;codepen.io&#x2F;thlorenz&quot;&gt;@thlorenz&lt;&#x2F;a&gt;)
+  on &lt;a href=&quot;https:&#x2F;&#x2F;codepen.io&quot;&gt;CodePen&lt;&#x2F;a&gt;.&lt;&#x2F;span&gt;
+&lt;&#x2F;p&gt;
+&lt;script async src=&quot;https:&#x2F;&#x2F;cpwebassets.codepen.io&#x2F;assets&#x2F;embed&#x2F;ei.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;&#x2F;detils&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Interacting with Transactions</title>
+        <published>2024-06-30T08:00:00+00:00</published>
+        <updated>2024-06-30T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/docs/luzidsdk/04-transactions/"/>
+        <id>https://luzid.app/docs/luzidsdk/04-transactions/</id>
+        
+        <content type="html" xml:base="https://luzid.app/docs/luzidsdk/04-transactions/">&lt;p&gt;The Luzid &lt;code&gt;transaction&lt;&#x2F;code&gt; API allows you to interact with transactions.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;labeling-transactions&quot;&gt;Labeling Transactions&lt;&#x2F;h2&gt;
+&lt;p&gt;In order to identify transactions more easily we can label them. The label is any string and
+will be used to show the transaction in the Luzid UI.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;signature &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;conn&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;requestAirdrop&lt;&#x2F;span&gt;&lt;span&gt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pubkey&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;web3&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;LAMPORTS_PER_SOL&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;luzid&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;transaction&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;labelTransaction&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;signature&lt;&#x2F;span&gt;&lt;span&gt;, &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;🪂 airdrop&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;details&gt;
+&lt;summary&gt;Full Example&lt;&#x2F;summary&gt;
+&lt;p class=&quot;codepen&quot; data-height=&quot;600&quot; data-theme-id=&quot;dark&quot; data-default-tab=&quot;js,result&quot; data-slug-hash=&quot;vYqppLq&quot; data-pen-title=&quot;Luzid: Transaction Labels&quot; data-preview=&quot;true&quot; data-editable=&quot;true&quot; data-user=&quot;thlorenz&quot; style=&quot;height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;&quot;&gt;
+  &lt;span&gt;See the Pen &lt;a href=&quot;https:&#x2F;&#x2F;codepen.io&#x2F;thlorenz&#x2F;pen&#x2F;vYqppLq&quot;&gt;
+  Luzid: Transaction Labels&lt;&#x2F;a&gt; by Thorsten Lorenz (&lt;a href=&quot;https:&#x2F;&#x2F;codepen.io&#x2F;thlorenz&quot;&gt;@thlorenz&lt;&#x2F;a&gt;)
+  on &lt;a href=&quot;https:&#x2F;&#x2F;codepen.io&quot;&gt;CodePen&lt;&#x2F;a&gt;.&lt;&#x2F;span&gt;
+&lt;&#x2F;p&gt;
+&lt;script async src=&quot;https:&#x2F;&#x2F;cpwebassets.codepen.io&#x2F;assets&#x2F;embed&#x2F;ei.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;&#x2F;details&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Luzid Alpha Release</title>
+        <published>2024-06-09T15:00:00+00:00</published>
+        <updated>2024-06-09T15:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/blog/luzid-alpha-release-separate-binary/"/>
+        <id>https://luzid.app/blog/luzid-alpha-release-separate-binary/</id>
+        
+        <content type="html" xml:base="https://luzid.app/blog/luzid-alpha-release-separate-binary/">&lt;p&gt;As some of you may know I joined &lt;a href=&quot;https:&#x2F;&#x2F;www.magicblock.gg&#x2F;&quot;&gt;MagicBlock&lt;&#x2F;a&gt; in order to be able
+to continue Luzid development and keep new releases coming while helping them provide the
+community with the tools needed to build FOCGs (Fully On Chain Games) on Solana.&lt;&#x2F;p&gt;
+&lt;p&gt;MagicBlock will support Luzid going forward as part of their open source tooling provided to
+the entire Solana community.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;modularity-to-democratize-tooling&quot;&gt;Modularity to Democratize Tooling&lt;&#x2F;h2&gt;
+&lt;p&gt;MagicBlock also wants to make these tools accessible to everyone and therefore
+decided to make Luzid available to Windows developers as well as on Linux and MacOS were it
+was already supported.&lt;&#x2F;p&gt;
+&lt;p&gt;In order to do that we modularized Luzid into a backend which currently embeds the Solana
+validator and a frontend which attaches to it in order to provide a convenient UI.&lt;&#x2F;p&gt;
+&lt;p&gt;On Windows that backend can be run inside the WSL (Windows Subsystem for Linux) and the
+frontend runs natively on Windows.&lt;&#x2F;p&gt;
+&lt;img src=&quot;.&#x2F;luzid-on-windows.png&quot; alt=&quot;luzid on windows&quot; style=&quot;width: 100%;&quot;&#x2F;&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;p&gt;The other use case that is now possible is to deploy the Luzid backend remotely and connect the
+UI running locally.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;installing-the-new-version&quot;&gt;Installing the new Version&lt;&#x2F;h2&gt;
+&lt;p&gt;Follow the release notes for either release:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;releases&#x2F;tag&#x2F;windows-v0.0.3&quot;&gt;Windows Release&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;releases&#x2F;tag&#x2F;macos-v0.0.3&quot;&gt;MacOS Release&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;releases&#x2F;tag&#x2F;linux-v0.0.3&quot;&gt;Linux Release&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;If you run into any issues please post them inside the
+&lt;code&gt;🪲 ︱luzid-issues&lt;&#x2F;code&gt; channel in the &lt;a href=&quot;https:&#x2F;&#x2F;discord.com&#x2F;invite&#x2F;MBkdC3gxcv&quot;&gt;MagicBlock Discord&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;coming-up-shortly&quot;&gt;Coming up Shortly&lt;&#x2F;h2&gt;
+&lt;p&gt;MagicBlock wants to make all types of games and applications possible on Solana even if they
+require thousands of transactions processed blazingly fast and state changes to be reflected in
+real time.&lt;&#x2F;p&gt;
+&lt;p&gt;Therefore a big part of my time at MagicBlock is spent building a &lt;strong&gt;low latency validator&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;This validator will be bundled with the next version of Luzid and &lt;strong&gt;boy is the Solana developer
+community in for a treat&lt;&#x2F;strong&gt;! Luzid will naturally inherit the improved performance of this
+MagicBlock validator and testing your Solana programs locally will be incredibly fast thus shortening the
+feedback loop even further.&lt;&#x2F;p&gt;
+&lt;p&gt;And when I say &amp;quot;incredibly fast&amp;quot; I literally mean &lt;em&gt;incredibly&lt;&#x2F;em&gt; fast, but you&#x27;ll have to see it
+to for your self 🔜&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Luzid Alpha Prerelease</title>
+        <published>2024-03-09T15:00:00+00:00</published>
+        <updated>2024-03-09T15:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/blog/luzid-alpha-prerelease/"/>
+        <id>https://luzid.app/blog/luzid-alpha-prerelease/</id>
+        
+        <content type="html" xml:base="https://luzid.app/blog/luzid-alpha-prerelease/">&lt;img src=&quot;.&#x2F;luzid_transactions.png&quot; alt=&quot;luzid transactions&quot; style=&quot;width: 100%;&quot;&#x2F;&gt;
+&lt;p&gt;I expect you have been waiting patiently to get your hands on a copy of Luzid and I&#x27;ve been
+working hard behind the scenes to make it happen. I&#x27;m excited to announce that the first Luzid
+Alpha is now ready to be released to early adopters.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;features&quot;&gt;Features&lt;&#x2F;h2&gt;
+&lt;p&gt;You can learn about the list of features that Luzid currently provides by watching the videos
+in &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;playlist?list=PL4k64WemroGk4B_NHN337425VDC1Fsn5D&quot;&gt;this playlist&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=3J_42C6xuNM&amp;amp;list=PL4k64WemroGk4B_NHN337425VDC1Fsn5D&amp;amp;index=2&quot;&gt;Luzid: Solana Test Validator on
+Steroids&lt;&#x2F;a&gt;
+video describes the following features:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Luzid Dashboard showing the status of the Validator&lt;&#x2F;li&gt;
+&lt;li&gt;Viewing Transactions and inspecting Parsed Transaction Account Data&lt;&#x2F;li&gt;
+&lt;li&gt;Cloning Remote Accounts into Luzid&lt;&#x2F;li&gt;
+&lt;li&gt;Creating and Restoring Account Snapshots&lt;&#x2F;li&gt;
+&lt;li&gt;Stopping&#x2F;Starting the Validator&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;In order to learn about the Luzid &lt;em&gt;Hotswap&lt;&#x2F;em&gt; feature I recommend watching
+&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Nbb88N1JvyE&amp;amp;list=PL4k64WemroGk4B_NHN337425VDC1Fsn5D&amp;amp;index=5&quot;&gt;Luzid: Hotswapping Programs after each Compile without Deploys or Validator Restart&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=M09YWUicVF0&amp;amp;list=PL4k64WemroGk4B_NHN337425VDC1Fsn5D&amp;amp;index=2&quot;&gt;Luzid: controlling your Validator via the SDK from your tests or
+application&lt;&#x2F;a&gt;
+explains how to control Luzid via TypeScript from a webpage or your tests.&lt;&#x2F;p&gt;
+&lt;p&gt;Make sure to read through the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;tree&#x2F;master&#x2F;ts&#x2F;examples&quot;&gt;SDK
+examples&lt;&#x2F;a&gt; as well.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;versions-and-release-pages&quot;&gt;Versions and Release Pages&lt;&#x2F;h2&gt;
+&lt;p&gt;The following versions are available:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Luzid Alpha for MacOS&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;releases&#x2F;tag&#x2F;macos-v0.0.2&quot;&gt;release page&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Luzid Alpha for Linux&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;releases&#x2F;tag&#x2F;linux-v0.0.2&quot;&gt;release page&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I advise especially &lt;strong&gt;MacOS users&lt;&#x2F;strong&gt; to &lt;strong&gt;read the release notes carefully&lt;&#x2F;strong&gt; as the installation process
+will be much easier as a result. However to help you in case issues arise, I&#x27;ve also prepared a
+video tutorial for you that is linked in the release notes.&lt;&#x2F;p&gt;
+&lt;p&gt;For Linux the installation process is much simpler especially if you&#x27;re on the latest LTS version of
+your distro.&lt;&#x2F;p&gt;
+&lt;p&gt;Windows can install the command line only version &lt;a href=&quot;https:&#x2F;&#x2F;luzid.app&#x2F;blog&#x2F;luzid-alpha-prerelease&#x2F;#headless-cli&quot;&gt;see Headless CLI&lt;&#x2F;a&gt; and run it in WSL.
+However for now a GUI for windows is not available until the release coming in a few weeks &lt;a href=&quot;https:&#x2F;&#x2F;luzid.app&#x2F;blog&#x2F;luzid-alpha-prerelease&#x2F;#plans-going-forward&quot;&gt;see
+below&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;luzid-ui&quot;&gt;Luzid UI&lt;&#x2F;h3&gt;
+&lt;p&gt;MacOS users can install the Luzid UI via the following file which will work on both Intel and ARM:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;luzid.app.tar.gz&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Linux users can install the Luzid UI via the following file:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;luzid.tar.gz&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;The release notes for each version contain more installation instructions.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;headless-cli&quot;&gt;Headless CLI&lt;&#x2F;h3&gt;
+&lt;p&gt;The Luzid UI embeds the Luzid validator, however you may want to run the validator separately.&lt;&#x2F;p&gt;
+&lt;p&gt;To that end a &lt;em&gt;headless&lt;&#x2F;em&gt; Luzid version is available for MacOS, Linux and Windows (using the
+Linux version via WSL). You can find it as part of the &lt;em&gt;Assets&lt;&#x2F;em&gt; of the respective releases.&lt;&#x2F;p&gt;
+&lt;p&gt;On MacOS install either of the below:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;lzd_aarch64-apple-darwin.tar.gz&lt;&#x2F;code&gt; (ARM)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;lzd_x86_64-apple-darwin.tar.gz&lt;&#x2F;code&gt; (Intel)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;On Linux install:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;lzd.tar.gz&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Either will provide you a &lt;code&gt;lzd&lt;&#x2F;code&gt; command that you can run via &lt;code&gt;VALIDATOR_START=1 .&#x2F;lzd&lt;&#x2F;code&gt; in order
+to launch Luzid and start the validator as well.&lt;&#x2F;p&gt;
+&lt;p&gt;Then you can control&#x2F;query Luzid via the SDK as well as have it process transactions.&lt;&#x2F;p&gt;
+&lt;p&gt;Refer to the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;luzid-app&#x2F;luzid-sdk&#x2F;tree&#x2F;master&#x2F;ts&#x2F;examples&quot;&gt;SDK examples&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;getting-started-quickly&quot;&gt;Getting Started Quickly&lt;&#x2F;h2&gt;
+&lt;p&gt;Once you startup the Luzid UI open the &lt;em&gt;Transactions&lt;&#x2F;em&gt; tab, click on the &lt;em&gt;Anchor Tic Tac Toe&lt;&#x2F;em&gt; link
+and play around with the app while keeping an eye on Luzid.&lt;&#x2F;p&gt;
+&lt;p&gt;You can follow along the &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=M09YWUicVF0&amp;amp;list=PL4k64WemroGk4B_NHN337425VDC1Fsn5D&amp;amp;index=2&quot;&gt;Luzid: controlling your Validator via the SDK from your tests or
+application&lt;&#x2F;a&gt;
+video as well.&lt;&#x2F;p&gt;
+&lt;p&gt;Once you have that working you should try to clone and then interact with other programs from
+Mainnet or Devnet and of course I recommend you to add a local &lt;em&gt;Workspace&lt;&#x2F;em&gt; and have it being
+watched by Luzid in order to benefit from the &lt;em&gt;Hotswap&lt;&#x2F;em&gt; feature.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;current-status-and-future-plans&quot;&gt;Current Status and Future Plans&lt;&#x2F;h2&gt;
+&lt;p&gt;I realize that Luzid is still very rough around the edges and you might run into some issues
+as well as miss some features that are essential to you.
+Please don&#x27;t hesitate to reach out to me and other early adopters on our &lt;a href=&quot;https:&#x2F;&#x2F;discord.com&#x2F;invite&#x2F;MBkdC3gxcv&quot;&gt;Luzid
+Discord&lt;&#x2F;a&gt; to either have your questions answered or
+engage in discussions about how to improve Luzid.&lt;&#x2F;p&gt;
+&lt;p&gt;In the Developers section you can file issues and request new features.&lt;&#x2F;p&gt;
+&lt;p&gt;At any rate check in and say hi! 👋&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;plans-going-forward&quot;&gt;Plans Going Forward&lt;&#x2F;h3&gt;
+&lt;p&gt;The next big improvement for Luzid will be the replacement of the embedded validator which is
+currently a fork of the existing Solana validator.&lt;&#x2F;p&gt;
+&lt;p&gt;The new validator will be tailored to local development, run much faster and utilize less CPU
+resources.&lt;&#x2F;p&gt;
+&lt;p&gt;Additionally I&#x27;m planning to separate the UI and Validator pieces such that you can start Luzid
+from the command line and attach a UI to it on demand. This will make it easier to support
+Windows and allow us to provide the Luzid UI via a WebApp running in the browser.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Aaran Xu</title>
+        <published>2021-04-01T08:50:45+00:00</published>
+        <updated>2021-04-01T08:50:45+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://luzid.app/authors/aaran-xu/"/>
+        <id>https://luzid.app/authors/aaran-xu/</id>
+        
+        <content type="html" xml:base="https://luzid.app/authors/aaran-xu/">&lt;p&gt;Creator of &lt;strong&gt;AdiDoks&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;aaranxu&quot;&gt;@aaranxu&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+  <link rel="preload" as="font" href="https://luzid.app/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="https://luzid.app/fonts/vendor/jost/jost-v4-latin-700.woff2"  type="font/woff2" crossorigin>
+
+
+<link rel="stylesheet" href="https://luzid.app/main.css">
+
+
+
+  
+  
+  
+  
+  
+    
+  
+
+  
+  
+    
+    
+  
+
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+
+	
+
+
+	
+
+<title>Luzid Alpha Prerelease | Luzid</title>
+<meta name="description" content="Introducing the first (semi) public Luzid Release">
+<link rel="canonical" href="https://luzid.app/blog/luzid-alpha-prerelease/">
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  
+    <meta name="twitter:image" content="https://luzid.app/luzid.png">
+  
+  <meta name="twitter:title" content="Luzid Alpha Prerelease">
+  <meta name="twitter:description" content="Introducing the first (semi) public Luzid Release">
+  <meta name="twitter:site" content="@thlorenz">
+  <meta name="twitter:creator" content="@thlorenz">
+
+  <meta property="og:title" content="Luzid Alpha Prerelease">
+  <meta property="og:description" content="Introducing the first (semi) public Luzid Release">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://luzid.app/blog/luzid-alpha-prerelease/">
+
+  
+    <meta property="og:image" content="https://luzid.app/luzid.png">
+  
+
+  <meta property="og:updated_time" content="2024-03-09T15:00:00+00:00">
+  <meta property="og:site_name" content="Luzid Alpha Prerelease">
+
+  
+
+  
+
+  
+  <meta property="article:publisher" content="https://www.twitter.com/thlorenz">
+  <meta property="article:author" content="https://www.twitter.com/thlorenz">
+  <meta property="og:locale" content="en_US">
+
+
+
+
+
+  
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/blog/luzid-alpha-prerelease/"
+      },
+      "headline": "Luzid Alpha Prerelease",
+      "image": ,
+      "datePublished": "2024-03-09T15:00:00+00:00",
+      "dateModified": "2024-03-09T15:00:00+00:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Luzid Alpha Prerelease"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Luzid Alpha Prerelease",
+        
+        "logo": {
+          "@type": "ImageObject",
+          "url": "/logo-luzid.png"
+        }
+        
+      },
+      "description": "Introducing the first (semi) public Luzid Release"
+    }
+    </script>
+  
+
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    
+      
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          {
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "Home",
+            "item": "https://luzid.app/"
+          },
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "Blog",
+            "item": "https://luzid.app/blog/"
+          },
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  3 ,
+            "name": "Luzid Alpha Prerelease",
+            "item": "https://luzid.app/blog/luzid-alpha-prerelease/"
+          },
+        
+      
+    
+  }
+</script>
+
+
+
+
+
+
+
+  <meta name="theme-color" content="#fff">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://luzid.app/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://luzid.app/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://luzid.app/favicon-16x16.png">
+  
+    <link rel="manifest" href="https://luzid.app/site.webmanifest" crossorigin>
+  
+
+
+  
+
+</head>
+
+  
+
+<body class="blog single">
+  
+  
+<div class="header-bar fixed-top"></div>
+<header class="navbar fixed-top navbar-expand-md navbar-light">
+	<div class="container">
+		<input class="menu-btn order-0" type="checkbox" id="menu-btn">
+		<label class="menu-icon d-md-none" for="menu-btn"><span class="navicon"></span></label>
+    <!--
+		<a class="navbar-brand order-1 order-md-0 me-auto" href="https://luzid.app">Luzid</a>
+    -->
+		<button id="mode" class="btn btn-link order-2 order-md-4" type="button" aria-label="Toggle mode">
+			<span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+			<span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+		</button>
+		<ul class="navbar-nav fork-me order-3 order-md-5">
+			
+				
+					<li class="nav-item">
+						<a class="nav-link" href="https://discord.com/invite/MBkdC3gxcv"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path fill="#fff" d="M 19.73 4.87 a 18.2 18.2 0 0 0 -4.6 -1.44 c -0.21 0.4 -0.4 0.8 -0.58 1.21 c -1.69 -0.25 -3.4 -0.25 -5.1 0 c -0.18 -0.41 -0.37 -0.82 -0.59 -1.2 c -1.6 0.27 -3.14 0.75 -4.6 1.43 A 19.04 19.04 0 0 0 0.96 17.7 a 18.43 18.43 0 0 0 5.63 2.87 c 0.46 -0.62 0.86 -1.28 1.2 -1.98 c -0.65 -0.25 -1.29 -0.55 -1.9 -0.92 c 0.17 -0.12 0.32 -0.24 0.47 -0.37 c 3.58 1.7 7.7 1.7 11.28 0 l 0.46 0.37 c -0.6 0.36 -1.25 0.67 -1.9 0.92 c 0.35 0.7 0.75 1.35 1.2 1.98 c 2.03 -0.63 3.94 -1.6 5.64 -2.87 c 0.47 -4.87 -0.78 -9.09 -3.3 -12.83 Z M 8.3 15.12 c -1.1 0 -2 -1.02 -2 -2.27 c 0 -1.24 0.88 -2.26 2 -2.26 s 2.02 1.02 2 2.26 c 0 1.25 -0.89 2.27 -2 2.27 Z m 7.4 0 c -1.1 0 -2 -1.02 -2 -2.27 c 0 -1.24 0.88 -2.26 2 -2.26 s 2.02 1.02 2 2.26 c 0 1.25 -0.88 2.27 -2 2.27 Z"/></svg><span class="ms-2 visually-hidden">Discord</span></a>
+					</li>
+				
+					<li class="nav-item">
+						<a class="nav-link" href="https://twitter.com/thlorenz"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><span class="ms-2 visually-hidden">Twitter</span></a>
+					</li>
+				
+					<li class="nav-item">
+						<a class="nav-link" href="https://github.com/magicblock-labs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><span class="ms-2 visually-hidden">GitHub</span></a>
+					</li>
+				
+			
+		</ul>
+		<div class="collapse navbar-collapse order-4 order-md-1">
+			<ul class="navbar-nav main-nav me-auto order-5 order-md-2">
+				
+					
+				
+				
+				
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://luzid.app">Home</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://luzid.app/docs/getting-started/installation">Documentation</a>
+						</li>
+					
+						<li class="nav-item blog active">
+							<a class="nav-link" href="https://luzid.app/blog">Blog</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://luzid.app/luzid-sdk/docs/ts/classes/luzid_sdk.LuzidSdk.html">@luzid&#x2F;sdk</a>
+						</li>
+					
+				
+			</ul>
+			<div class="break order-6 d-md-none"></div>
+			
+		</div>
+	</div>
+</header>
+
+
+
+  
+<div class="wrap container" role="document">
+  <div class="content">
+    <div class="row justify-content-center">
+      <div class="col-md-12 col-lg-10 col-xxl-8">
+        <article>
+          <div class="blog-header">
+            <h1>Luzid Alpha Prerelease</h1>
+            
+<p><small>Posted 2024-03-09 15:00:00 by <a class="stretched-link position-relative" href="https://luzid.app/authors/thorsten-lorenz/">Thorsten Lorenz</a>&nbsp;&hyphen;&nbsp;<strong>5&nbsp;min read</strong></small><p>
+
+          </div>
+          <p class="lead">🎉 It's been a long time coming. The first Luzid Alpha is here!</p>
+          
+              <i><h5>Table of Contents</h5></i>
+              <ul>
+              
+                  <li>
+                      <a href="https://luzid.app/blog/luzid-alpha-prerelease/#features">Features</a>
+                      
+                  </li>
+              
+                  <li>
+                      <a href="https://luzid.app/blog/luzid-alpha-prerelease/#versions-and-release-pages">Versions and Release Pages</a>
+                      
+                          <ul>
+                              
+                                  <li>
+                                      <a href="https://luzid.app/blog/luzid-alpha-prerelease/#luzid-ui">Luzid UI</a>
+                                      
+                                  </li>
+                              
+                                  <li>
+                                      <a href="https://luzid.app/blog/luzid-alpha-prerelease/#headless-cli">Headless CLI</a>
+                                      
+                                  </li>
+                              
+                          </ul>
+                      
+                  </li>
+              
+                  <li>
+                      <a href="https://luzid.app/blog/luzid-alpha-prerelease/#getting-started-quickly">Getting Started Quickly</a>
+                      
+                  </li>
+              
+                  <li>
+                      <a href="https://luzid.app/blog/luzid-alpha-prerelease/#current-status-and-future-plans">Current Status and Future Plans</a>
+                      
+                          <ul>
+                              
+                                  <li>
+                                      <a href="https://luzid.app/blog/luzid-alpha-prerelease/#plans-going-forward">Plans Going Forward</a>
+                                      
+                                  </li>
+                              
+                          </ul>
+                      
+                  </li>
+              
+              </ul>
+              <hr>
+          
+          <img src="./luzid_transactions.png" alt="luzid transactions" style="width: 100%;"/>
+<p>I expect you have been waiting patiently to get your hands on a copy of Luzid and I've been
+working hard behind the scenes to make it happen. I'm excited to announce that the first Luzid
+Alpha is now ready to be released to early adopters.</p>
+<h2 id="features">Features</h2>
+<p>You can learn about the list of features that Luzid currently provides by watching the videos
+in <a href="https://www.youtube.com/playlist?list=PL4k64WemroGk4B_NHN337425VDC1Fsn5D">this playlist</a>.</p>
+<p>The <a href="https://www.youtube.com/watch?v=3J_42C6xuNM&amp;list=PL4k64WemroGk4B_NHN337425VDC1Fsn5D&amp;index=2">Luzid: Solana Test Validator on
+Steroids</a>
+video describes the following features:</p>
+<ul>
+<li>Luzid Dashboard showing the status of the Validator</li>
+<li>Viewing Transactions and inspecting Parsed Transaction Account Data</li>
+<li>Cloning Remote Accounts into Luzid</li>
+<li>Creating and Restoring Account Snapshots</li>
+<li>Stopping/Starting the Validator</li>
+</ul>
+<p>In order to learn about the Luzid <em>Hotswap</em> feature I recommend watching
+<a href="https://www.youtube.com/watch?v=Nbb88N1JvyE&amp;list=PL4k64WemroGk4B_NHN337425VDC1Fsn5D&amp;index=5">Luzid: Hotswapping Programs after each Compile without Deploys or Validator Restart</a></p>
+<p>The <a href="https://www.youtube.com/watch?v=M09YWUicVF0&amp;list=PL4k64WemroGk4B_NHN337425VDC1Fsn5D&amp;index=2">Luzid: controlling your Validator via the SDK from your tests or
+application</a>
+explains how to control Luzid via TypeScript from a webpage or your tests.</p>
+<p>Make sure to read through the <a href="https://github.com/luzid-app/luzid-sdk/tree/master/ts/examples">SDK
+examples</a> as well.</p>
+<h2 id="versions-and-release-pages">Versions and Release Pages</h2>
+<p>The following versions are available:</p>
+<ul>
+<li><strong>Luzid Alpha for MacOS</strong>: <a href="https://github.com/luzid-app/luzid-sdk/releases/tag/macos-v0.0.2">release page</a></li>
+<li><strong>Luzid Alpha for Linux</strong>: <a href="https://github.com/luzid-app/luzid-sdk/releases/tag/linux-v0.0.2">release page</a></li>
+</ul>
+<p>I advise especially <strong>MacOS users</strong> to <strong>read the release notes carefully</strong> as the installation process
+will be much easier as a result. However to help you in case issues arise, I've also prepared a
+video tutorial for you that is linked in the release notes.</p>
+<p>For Linux the installation process is much simpler especially if you're on the latest LTS version of
+your distro.</p>
+<p>Windows can install the command line only version <a href="https://luzid.app/blog/luzid-alpha-prerelease/#headless-cli">see Headless CLI</a> and run it in WSL.
+However for now a GUI for windows is not available until the release coming in a few weeks <a href="https://luzid.app/blog/luzid-alpha-prerelease/#plans-going-forward">see
+below</a>.</p>
+<h3 id="luzid-ui">Luzid UI</h3>
+<p>MacOS users can install the Luzid UI via the following file which will work on both Intel and ARM:</p>
+<ul>
+<li><code>luzid.app.tar.gz</code></li>
+</ul>
+<p>Linux users can install the Luzid UI via the following file:</p>
+<ul>
+<li><code>luzid.tar.gz</code></li>
+</ul>
+<p><em>The release notes for each version contain more installation instructions.</em></p>
+<h3 id="headless-cli">Headless CLI</h3>
+<p>The Luzid UI embeds the Luzid validator, however you may want to run the validator separately.</p>
+<p>To that end a <em>headless</em> Luzid version is available for MacOS, Linux and Windows (using the
+Linux version via WSL). You can find it as part of the <em>Assets</em> of the respective releases.</p>
+<p>On MacOS install either of the below:</p>
+<ul>
+<li><code>lzd_aarch64-apple-darwin.tar.gz</code> (ARM)</li>
+<li><code>lzd_x86_64-apple-darwin.tar.gz</code> (Intel)</li>
+</ul>
+<p>On Linux install:</p>
+<ul>
+<li><code>lzd.tar.gz</code></li>
+</ul>
+<p>Either will provide you a <code>lzd</code> command that you can run via <code>VALIDATOR_START=1 ./lzd</code> in order
+to launch Luzid and start the validator as well.</p>
+<p>Then you can control/query Luzid via the SDK as well as have it process transactions.</p>
+<p>Refer to the <a href="https://github.com/luzid-app/luzid-sdk/tree/master/ts/examples">SDK examples</a>.</p>
+<h2 id="getting-started-quickly">Getting Started Quickly</h2>
+<p>Once you startup the Luzid UI open the <em>Transactions</em> tab, click on the <em>Anchor Tic Tac Toe</em> link
+and play around with the app while keeping an eye on Luzid.</p>
+<p>You can follow along the <a href="https://www.youtube.com/watch?v=M09YWUicVF0&amp;list=PL4k64WemroGk4B_NHN337425VDC1Fsn5D&amp;index=2">Luzid: controlling your Validator via the SDK from your tests or
+application</a>
+video as well.</p>
+<p>Once you have that working you should try to clone and then interact with other programs from
+Mainnet or Devnet and of course I recommend you to add a local <em>Workspace</em> and have it being
+watched by Luzid in order to benefit from the <em>Hotswap</em> feature.</p>
+<h2 id="current-status-and-future-plans">Current Status and Future Plans</h2>
+<p>I realize that Luzid is still very rough around the edges and you might run into some issues
+as well as miss some features that are essential to you.
+Please don't hesitate to reach out to me and other early adopters on our <a href="https://discord.com/invite/MBkdC3gxcv">Luzid
+Discord</a> to either have your questions answered or
+engage in discussions about how to improve Luzid.</p>
+<p>In the Developers section you can file issues and request new features.</p>
+<p>At any rate check in and say hi! 👋</p>
+<h3 id="plans-going-forward">Plans Going Forward</h3>
+<p>The next big improvement for Luzid will be the replacement of the embedded validator which is
+currently a fork of the existing Solana validator.</p>
+<p>The new validator will be tailored to local development, run much faster and utilize less CPU
+resources.</p>
+<p>Additionally I'm planning to separate the UI and Validator pieces such that you can start Luzid
+from the command line and attach a UI to it on demand. This will make it easier to support
+Windows and allow us to provide the Luzid UI via a WebApp running in the browser.</p>
+
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    
+<footer class="footer text-muted">
+	<div class="container">
+		<div class="row">
+        <!--
+			<div class="col-lg-8 order-last order-lg-first">
+				<ul class="list-inline">
+					
+						<li class="list-inline-item">Powered by <a href="https://www.netlify.com/">Netlify</a>, <a href="https://www.getzola.org/">Zola</a>, and <a href="https://github.com/aaranxu/adidoks">AdiDoks</a></li>
+					
+				</ul>
+			</div>
+        -->
+			<div class="col-lg-8 order-first order-lg-last text-lg-end">
+				<ul class="list-inline">
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+  
+
+  
+<script type="text/javascript" src="https://luzid.app/js/main.js" defer></script>
+
+
+</body>
+</html>

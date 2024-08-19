@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+  <link rel="preload" as="font" href="https://luzid.app/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="https://luzid.app/fonts/vendor/jost/jost-v4-latin-700.woff2"  type="font/woff2" crossorigin>
+
+
+<link rel="stylesheet" href="https://luzid.app/main.css">
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+  
+
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+
+	
+
+
+	
+
+<title>Saving and Restoring Snapshots | Luzid</title>
+<meta name="description" content="Luzid: Solana Development at Light Speed">
+<link rel="canonical" href="https://luzid.app/docs/luzidsdk/03-snapshots/">
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  
+    <meta name="twitter:image" content="https://luzid.app/luzid.png">
+  
+  <meta name="twitter:title" content="Saving and Restoring Snapshots">
+  <meta name="twitter:description" content="Luzid: Solana Development at Light Speed">
+  <meta name="twitter:site" content="@thlorenz">
+  <meta name="twitter:creator" content="@thlorenz">
+
+  <meta property="og:title" content="Saving and Restoring Snapshots">
+  <meta property="og:description" content="Luzid: Solana Development at Light Speed">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://luzid.app/docs/luzidsdk/03-snapshots/">
+
+  
+    <meta property="og:image" content="https://luzid.app/luzid.png">
+  
+
+  <meta property="og:updated_time" content="2024-06-30T08:00:00+00:00">
+  <meta property="og:site_name" content="Saving and Restoring Snapshots">
+
+  
+
+  
+
+  
+  <meta property="article:publisher" content="https://www.twitter.com/thlorenz">
+  <meta property="article:author" content="https://www.twitter.com/thlorenz">
+  <meta property="og:locale" content="en_US">
+
+
+
+
+
+  
+
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    
+      
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          {
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "Home",
+            "item": "https://luzid.app/"
+          },
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "Docs",
+            "item": "https://luzid.app/docs/"
+          },
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  3 ,
+            "name": "Luzidsdk",
+            "item": "https://luzid.app/docs/luzidsdk/"
+          },
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  4 ,
+            "name": "03 Snapshots",
+            "item": "https://luzid.app/docs/luzidsdk/03-snapshots/"
+          },
+        
+      
+    
+  }
+</script>
+
+
+
+
+
+
+  <meta name="theme-color" content="#fff">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://luzid.app/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://luzid.app/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://luzid.app/favicon-16x16.png">
+  
+    <link rel="manifest" href="https://luzid.app/site.webmanifest" crossorigin>
+  
+
+
+  
+
+</head>
+
+  
+
+<body class="docs single">
+  
+  
+  
+  
+<div class="header-bar fixed-top"></div>
+<header class="navbar fixed-top navbar-expand-md navbar-light">
+	<div class="container">
+		<input class="menu-btn order-0" type="checkbox" id="menu-btn">
+		<label class="menu-icon d-md-none" for="menu-btn"><span class="navicon"></span></label>
+    <!--
+		<a class="navbar-brand order-1 order-md-0 me-auto" href="https://luzid.app">Luzid</a>
+    -->
+		<button id="mode" class="btn btn-link order-2 order-md-4" type="button" aria-label="Toggle mode">
+			<span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+			<span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+		</button>
+		<ul class="navbar-nav fork-me order-3 order-md-5">
+			
+				
+					<li class="nav-item">
+						<a class="nav-link" href="https://discord.com/invite/MBkdC3gxcv"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path fill="#fff" d="M 19.73 4.87 a 18.2 18.2 0 0 0 -4.6 -1.44 c -0.21 0.4 -0.4 0.8 -0.58 1.21 c -1.69 -0.25 -3.4 -0.25 -5.1 0 c -0.18 -0.41 -0.37 -0.82 -0.59 -1.2 c -1.6 0.27 -3.14 0.75 -4.6 1.43 A 19.04 19.04 0 0 0 0.96 17.7 a 18.43 18.43 0 0 0 5.63 2.87 c 0.46 -0.62 0.86 -1.28 1.2 -1.98 c -0.65 -0.25 -1.29 -0.55 -1.9 -0.92 c 0.17 -0.12 0.32 -0.24 0.47 -0.37 c 3.58 1.7 7.7 1.7 11.28 0 l 0.46 0.37 c -0.6 0.36 -1.25 0.67 -1.9 0.92 c 0.35 0.7 0.75 1.35 1.2 1.98 c 2.03 -0.63 3.94 -1.6 5.64 -2.87 c 0.47 -4.87 -0.78 -9.09 -3.3 -12.83 Z M 8.3 15.12 c -1.1 0 -2 -1.02 -2 -2.27 c 0 -1.24 0.88 -2.26 2 -2.26 s 2.02 1.02 2 2.26 c 0 1.25 -0.89 2.27 -2 2.27 Z m 7.4 0 c -1.1 0 -2 -1.02 -2 -2.27 c 0 -1.24 0.88 -2.26 2 -2.26 s 2.02 1.02 2 2.26 c 0 1.25 -0.88 2.27 -2 2.27 Z"/></svg><span class="ms-2 visually-hidden">Discord</span></a>
+					</li>
+				
+					<li class="nav-item">
+						<a class="nav-link" href="https://twitter.com/thlorenz"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><span class="ms-2 visually-hidden">Twitter</span></a>
+					</li>
+				
+					<li class="nav-item">
+						<a class="nav-link" href="https://github.com/magicblock-labs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><span class="ms-2 visually-hidden">GitHub</span></a>
+					</li>
+				
+			
+		</ul>
+		<div class="collapse navbar-collapse order-4 order-md-1">
+			<ul class="navbar-nav main-nav me-auto order-5 order-md-2">
+				
+					
+				
+				
+				
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://luzid.app">Home</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://luzid.app/docs/getting-started/installation">Documentation</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://luzid.app/blog">Blog</a>
+						</li>
+					
+						<li class="nav-item">
+							<a class="nav-link" href="https://luzid.app/luzid-sdk/docs/ts/classes/luzid_sdk.LuzidSdk.html">@luzid&#x2F;sdk</a>
+						</li>
+					
+				
+			</ul>
+			<div class="break order-6 d-md-none"></div>
+			
+		</div>
+	</div>
+</header>
+
+
+
+  
+<div class="wrap container" role="document">
+  <div class="content">
+    <div class="row flex-xl-nowrap">
+	  
+<div class="col-lg-5 col-xl-4 docs-sidebar">
+	<nav class="docs-links" aria-label="Main navigation">
+			
+			
+			
+			
+					
+					
+					
+							<h3>Getting Started</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://luzid.app/docs/getting-started/installation/">Installation</a></li>
+							                           
+									<li><a class="docs-link" href="https://luzid.app/docs/getting-started/running-luzid/">Running Luzid</a></li>
+							                           
+									<li><a class="docs-link" href="https://luzid.app/docs/getting-started/windows-installation/">Windows Installation</a></li>
+							
+					</ul>
+					
+					
+					
+					
+							<h3>Luzid App</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://luzid.app/docs/luzidapp/01-features/">Features</a></li>
+							                           
+									<li><a class="docs-link" href="https://luzid.app/docs/luzidapp/02-dashboard/">Dashboard</a></li>
+							                           
+									<li><a class="docs-link" href="https://luzid.app/docs/luzidapp/03-transactions/">Transactions</a></li>
+							                           
+									<li><a class="docs-link" href="https://luzid.app/docs/luzidapp/04-accounts-inspector/">Accounts Inspector</a></li>
+							                           
+									<li><a class="docs-link" href="https://luzid.app/docs/luzidapp/05-accounts/">Accounts</a></li>
+							                           
+									<li><a class="docs-link" href="https://luzid.app/docs/luzidapp/06-workspaces/">Workspaces</a></li>
+							
+					</ul>
+					
+					
+					
+					
+							<h3>Luzid SDK</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://luzid.app/docs/luzidsdk/01-sdk-intro/">Introduction</a></li>
+							                           
+									<li><a class="docs-link" href="https://luzid.app/docs/luzidsdk/02-mutate-accounts/">Mutating and Cloning Accounts</a></li>
+							                           
+									<li><a class="docs-link active" href="https://luzid.app/docs/luzidsdk/03-snapshots/">Saving and Restoring Snapshots</a></li>
+							                           
+									<li><a class="docs-link" href="https://luzid.app/docs/luzidsdk/04-transactions/">Interacting with Transactions</a></li>
+							
+					</ul>
+					
+					
+			
+	</nav>
+</div>
+
+	  
+  
+  <nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+  	<div class="page-links">
+  			<h3>On this page</h3>
+  			<nav id="TableOfContents">
+  					<ul>
+  							
+  							<li><a href="https://luzid.app/docs/luzidsdk/03-snapshots/#save-account-snapshot">Save Account Snapshot</a></li>
+  							
+  							
+  							<li><a href="https://luzid.app/docs/luzidsdk/03-snapshots/#listing-snapshots">Listing Snapshots</a></li>
+  							
+  							
+  							<li><a href="https://luzid.app/docs/luzidsdk/03-snapshots/#getting-list-of-snapshotable-accounts">Getting List of snapshotable Accounts</a></li>
+  							
+  							
+  							<li><a href="https://luzid.app/docs/luzidsdk/03-snapshots/#restoring-a-snapshot">Restoring a Snapshot</a></li>
+  							
+  							
+  							<li><a href="https://luzid.app/docs/luzidsdk/03-snapshots/#deleting-snapshots">Deleting Snapshots</a></li>
+  							
+  							
+  							<li><a href="https://luzid.app/docs/luzidsdk/03-snapshots/#full-example">Full Example</a></li>
+  							
+  							
+  					</ul>
+  			</nav>
+  	</div>
+  </nav>
+  
+
+      <main class="docs-content col-lg-11 col-xl-9">
+        <h1>Saving and Restoring Snapshots</h1>
+        
+        <p>The Luzid <code>snapshot</code> API allows you to save snapshots, restore and delete them. It also
+supports grouping multiple snapshots to perform operations on them in batch.</p>
+<p>Here we go through all methods to manage snapshots first and provide a full example leveraging
+all of them at the bottom of this doc.</p>
+<h2 id="save-account-snapshot">Save Account Snapshot</h2>
+<p>In the below we create a snapshot with the following properties:</p>
+<ul>
+<li><strong>name</strong>: <code>'Luzid Snapshot Example'</code></li>
+<li><strong>description</strong>: <code>'Snapshotting the account we just cloned'</code></li>
+</ul>
+<p>We include the following accounts:</p>
+<ul>
+<li><code>[accAddr]</code> (an array of account addresses)</li>
+</ul>
+<p>Finally we add the snapshot to the<code>'example:snapshot'</code> group.</p>
+<pre data-lang="ts" style="background-color:#2b303b;color:#c0c5ce;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#b48ead;">import </span><span>{ </span><span style="color:#bf616a;">LuzidSdk </span><span>} </span><span style="color:#b48ead;">from </span><span>&#39;</span><span style="color:#a3be8c;">@luzid/sdk</span><span>&#39;
+</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">luzid </span><span>= new LuzidSdk()
+</span><span>
+</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">res </span><span>= </span><span style="color:#b48ead;">await </span><span style="color:#bf616a;">luzid</span><span>.</span><span style="color:#bf616a;">snapshot</span><span>.</span><span style="color:#8fa1b3;">createSnapshot</span><span>(
+</span><span>  &#39;</span><span style="color:#a3be8c;">Luzid Snapshot Example</span><span>&#39;,
+</span><span>  [</span><span style="color:#bf616a;">accAddr</span><span>],
+</span><span>  {
+</span><span>    group: &#39;</span><span style="color:#a3be8c;">example:snapshot</span><span>&#39;,
+</span><span>    description: &#39;</span><span style="color:#a3be8c;">Snapshotting the account we just cloned</span><span>&#39;
+</span><span>  }
+</span><span>)
+</span><span style="color:#ebcb8b;">console</span><span>.</span><span style="color:#96b5b4;">log</span><span>(&#39;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">Created snapshot</span><span>&#39;, </span><span style="color:#bf616a;">res</span><span>)
+</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">snapshotId </span><span>= </span><span style="color:#bf616a;">res</span><span>.</span><span style="color:#bf616a;">snapshotId
+</span></code></pre>
+<h2 id="listing-snapshots">Listing Snapshots</h2>
+<p>We can then obtain a list of snapshots we saved as follows:</p>
+<pre data-lang="ts" style="background-color:#2b303b;color:#c0c5ce;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#b48ead;">const </span><span style="color:#bf616a;">snapshots </span><span>= </span><span style="color:#b48ead;">await </span><span style="color:#bf616a;">luzid</span><span>.</span><span style="color:#bf616a;">snapshot</span><span>.</span><span style="color:#8fa1b3;">listSnapshots</span><span>()
+</span><span style="color:#ebcb8b;">console</span><span>.</span><span style="color:#96b5b4;">log</span><span>(&#39;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">Snapshots:</span><span>&#39;, </span><span style="color:#bf616a;">snapshots</span><span>)
+</span></code></pre>
+<h2 id="getting-list-of-snapshotable-accounts">Getting List of snapshotable Accounts</h2>
+<p>In order to get the addresses of all accounts we can snapshot we can use the following method:</p>
+<pre data-lang="ts" style="background-color:#2b303b;color:#c0c5ce;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#b48ead;">const </span><span style="color:#bf616a;">accounts </span><span>= </span><span style="color:#b48ead;">await </span><span style="color:#bf616a;">luzid</span><span>.</span><span style="color:#bf616a;">snapshot</span><span>.</span><span style="color:#8fa1b3;">getSnaphotableAccounts</span><span>({ includeProgramAccounts: </span><span style="color:#d08770;">true </span><span>})
+</span><span style="color:#ebcb8b;">console</span><span>.</span><span style="color:#96b5b4;">log</span><span>(&#39;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">Accounts we can snapshot:</span><span>&#39;, </span><span style="color:#bf616a;">accounts</span><span>)
+</span></code></pre>
+<p>the result includes information about each account like pubkey, modified slot and balance.</p>
+<h2 id="restoring-a-snapshot">Restoring a Snapshot</h2>
+<p>In order to restore accounts from a snapshot we provide the <code>snapshotId</code> and the addresses of
+the accounts we want to restore.</p>
+<pre data-lang="ts" style="background-color:#2b303b;color:#c0c5ce;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#b48ead;">const </span><span style="color:#bf616a;">res </span><span>= </span><span style="color:#b48ead;">await </span><span style="color:#bf616a;">luzid</span><span>.</span><span style="color:#bf616a;">snapshot</span><span>.</span><span style="color:#8fa1b3;">restoreAccountsFromSnapshot</span><span>(</span><span style="color:#bf616a;">snapshotId</span><span>, {
+</span><span>  accounts: [</span><span style="color:#bf616a;">accAddr</span><span>]
+</span><span>})
+</span></code></pre>
+<h2 id="deleting-snapshots">Deleting Snapshots</h2>
+<p>We can delete one specific snapshot by providing its <code>snapshotId</code>:</p>
+<pre data-lang="ts" style="background-color:#2b303b;color:#c0c5ce;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#b48ead;">const </span><span style="color:#bf616a;">deletedSnapshotId </span><span>= </span><span style="color:#b48ead;">await </span><span style="color:#bf616a;">luzid</span><span>.</span><span style="color:#bf616a;">snapshot</span><span>.</span><span style="color:#8fa1b3;">deleteSnapshot</span><span>(</span><span style="color:#bf616a;">snapshotId</span><span>)
+</span></code></pre>
+<p>Alternatively we can delete all snapshots in a group:</p>
+<pre data-lang="ts" style="background-color:#2b303b;color:#c0c5ce;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#b48ead;">const </span><span style="color:#bf616a;">deletedSnasphotIds </span><span>= </span><span style="color:#b48ead;">await </span><span style="color:#8fa1b3;">deleteSnapshotsMatching</span><span>({ group: &#39;</span><span style="color:#a3be8c;">example:snapshot</span><span>&#39; })
+</span></code></pre>
+<h2 id="full-example">Full Example</h2>
+<p>The below lists snapshotable accounts, saves and restores a snapshot and finally deletes it.</p>
+<details>
+<summary>Full Example</summary>
+<p class="codepen" data-height="600" data-theme-id="dark" data-default-tab="js,result" data-slug-hash="poXpyqM" data-pen-title="Luzid: Snapshots" data-preview="true" data-editable="true" data-user="thlorenz" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/thlorenz/pen/poXpyqM">
+  Luzid: Snapshots</a> by Thorsten Lorenz (<a href="https://codepen.io/thlorenz">@thlorenz</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+</detils>
+
+        
+        
+<div class="docs-navigation d-flex justify-content-between">
+  
+  
+  
+  
+  
+  <a href="https:&#x2F;&#x2F;luzid.app&#x2F;docs&#x2F;luzidsdk&#x2F;02-mutate-accounts&#x2F;">
+    <div class="card my-1">
+      <div class="card-body py-2">
+        &larr; Mutating and Cloning Accounts
+      </div>
+    </div>
+  </a>
+  
+
+  
+  
+  
+  
+  
+    <a class="ms-auto" href="https:&#x2F;&#x2F;luzid.app&#x2F;docs&#x2F;luzidsdk&#x2F;04-transactions&#x2F;">
+      <div class="card my-1">
+        <div class="card-body py-2">
+          Interacting with Transactions &rarr;
+        </div>
+      </div>
+    </a>
+  
+</div>
+
+      </main>
+    </div>
+  </div>
+</div>
+
+
+  
+    
+<footer class="footer text-muted">
+	<div class="container">
+		<div class="row">
+        <!--
+			<div class="col-lg-8 order-last order-lg-first">
+				<ul class="list-inline">
+					
+						<li class="list-inline-item">Powered by <a href="https://www.netlify.com/">Netlify</a>, <a href="https://www.getzola.org/">Zola</a>, and <a href="https://github.com/aaranxu/adidoks">AdiDoks</a></li>
+					
+				</ul>
+			</div>
+        -->
+			<div class="col-lg-8 order-first order-lg-last text-lg-end">
+				<ul class="list-inline">
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+  
+
+  
+<script type="text/javascript" src="https://luzid.app/js/main.js" defer></script>
+
+
+</body>
+</html>
