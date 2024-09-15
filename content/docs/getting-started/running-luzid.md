@@ -55,6 +55,8 @@ manually or depend on all programs being available on `devnet`.
 Alternatively you can of course also deploy your programs as usual, but are then loosing out on
 Luzid's _hot swap_ feature.
 
+If you observe an `Unable to increase the maximum open file descriptor limit to 1000000` error while starting `luzid`, increase the file descriptor limit. [Example configuration](https://wiki.archlinux.org/title/Limits.conf#nofile) for Arch Linux.
+
 ### Running the UI
 
 In order to gain insight into your transactions and interact with the luzid backend you
